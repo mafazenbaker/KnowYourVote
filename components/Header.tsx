@@ -1,0 +1,24 @@
+export default function Header({ compact = false }: { compact?: boolean }) {
+  return (
+    <header className="bg-brand-navy text-white">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <div className="flex items-center gap-3">
+          <span
+            className="grid h-9 w-9 place-items-center rounded-lg bg-brand-red text-lg font-bold"
+            aria-hidden
+          >
+            ★
+          </span>
+          <span className="text-xl font-bold tracking-tight">
+            Ballot<span className="text-brand-coral">Match</span>
+          </span>
+        </div>
+        {!compact && (
+          <span className="hidden text-sm text-white/70 sm:block">
+            Nonpartisan · November 2026 Election
+          </span>
+        )}
+      </div>
+    </header>
+  );
+}
