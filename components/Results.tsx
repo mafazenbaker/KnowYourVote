@@ -2,7 +2,11 @@
 
 import { useMemo, useState } from "react";
 import type { Answers, MatchResult } from "@/lib/types";
-import { CANDIDATES } from "@/lib/candidates";
+import {
+  CANDIDATES,
+  candidatesForState,
+  STATE_NAMES_WITH_CANDIDATES,
+} from "@/lib/candidates";
 import { rankCandidates, priorityIssues } from "@/lib/scoring";
 import { US_STATES } from "@/lib/survey";
 
@@ -19,13 +23,26 @@ export default function Results({
   answers: Answers;
   onRestart: () => void;
 }) {
-  const results = useMemo(
-    () => rankCandidates(answers, CANDIDATES),
-    [answers],
-  );
+  const [previewAll, setPreviewAll] = useState(false);
+
   const stateName =
     US_STATES.find((s) => s.code === answers.state)?.name ?? "your state";
   const topIssues = priorityIssues(answers);
+
+  const inState = useMemo(
+    () => candidatesForState(answers.state),
+    [answers.state],
+  );
+  const hasStateCandidates = inState.length > 0;
+
+  // Filter to the voter's state unless they've opted to preview the full set.
+  const pool = previewAll || !hasStateCandidates ? CANDIDATES : inState;
+  const showingFiltered = hasStateCandidates && !previewAll;
+
+  const results = useMemo(
+    () => rankCandidates(answers, pool),
+    [answers, pool],
+  );
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-8">
@@ -42,11 +59,21 @@ export default function Results({
         <p className="text-sm font-medium text-brand-coral">
           Your ballot · {stateName}
         </p>
-        <h1 className="mt-1 font-display text-3xl font-bold">Your top matches</h1>
+        <h1 className="mt-1 font-display text-3xl font-bold">
+          {hasStateCandidates ? "Your top matches" : "Your matches"}
+        </h1>
         <p className="mx-auto mt-2 max-w-xl text-white/75">
-          Ranked by how closely each candidate lines up with the{" "}
-          {topIssues.length} issue{topIssues.length === 1 ? "" : "s"} you told us
-          matter most, plus your core values.
+          {showingFiltered
+            ? `Showing the ${inState.length} sample candidate${
+                inState.length === 1 ? "" : "s"
+              } on the ballot in ${stateName}, ranked by how closely each lines up with the ${
+                topIssues.length
+              } issue${topIssues.length === 1 ? "" : "s"} you care about most.`
+            : `Ranked by how closely each candidate lines up with the ${
+                topIssues.length
+              } issue${
+                topIssues.length === 1 ? "" : "s"
+              } you told us matter most, plus your core values.`}
         </p>
         {topIssues.length > 0 && (
           <div className="mt-4 flex flex-wrap justify-center gap-2">
@@ -61,6 +88,44 @@ export default function Results({
           </div>
         )}
       </div>
+
+      {/* No candidates loaded for this state */}
+      {!hasStateCandidates && (
+        <div className="mt-6 rounded-2xl border border-brand-navy/10 bg-white p-6 text-center shadow-card">
+          <p className="text-2xl" aria-hidden>
+            🗳️
+          </p>
+          <h2 className="mt-2 font-display text-xl font-bold text-brand-navy">
+            No candidates are loaded for {stateName} yet
+          </h2>
+          <p className="mx-auto mt-2 max-w-xl text-sm text-brand-navy/70">
+            This demo only includes sample candidates for{" "}
+            {STATE_NAMES_WITH_CANDIDATES.join(" and ")}. In a live version, your
+            state and district would load the real candidates on your ballot.
+            For now, here's how your answers would score against the full sample
+            set:
+          </p>
+        </div>
+      )}
+
+      {/* State-filter toggle (only when the state actually has candidates) */}
+      {hasStateCandidates && (
+        <div className="mt-6 flex items-center justify-center gap-2 text-sm">
+          <span className="text-brand-navy/60">
+            {showingFiltered
+              ? `On your ${stateName} ballot`
+              : "Showing all sample candidates"}
+          </span>
+          <button
+            onClick={() => setPreviewAll((p) => !p)}
+            className="rounded-full border border-brand-navy/20 px-4 py-1.5 font-semibold text-brand-navy transition hover:bg-brand-navy/5"
+          >
+            {showingFiltered
+              ? "Preview all sample candidates"
+              : `Show only ${stateName} ballot`}
+          </button>
+        </div>
+      )}
 
       {/* Candidate cards */}
       <div className="mt-6 space-y-4">

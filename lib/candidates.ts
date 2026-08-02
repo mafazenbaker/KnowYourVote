@@ -1,4 +1,5 @@
 import type { Candidate } from "./types";
+import { US_STATES } from "./survey";
 
 // ---------------------------------------------------------------------------
 // ILLUSTRATIVE SAMPLE CANDIDATES.
@@ -28,6 +29,7 @@ export const CANDIDATES: Candidate[] = [
     name: "Alex Romero",
     party: "Democratic Party",
     office: "U.S. Senate (sample)",
+    state: "PA",
     bio: "A progressive who campaigns on expanding public programs, aggressive climate action, and broadening civil-rights protections.",
     accent: "#1C1847",
     values: { v_govrole: 2, v_freedom: 2, v_environment: 2, v_faith: -2, v_change: 2 },
@@ -49,6 +51,7 @@ export const CANDIDATES: Candidate[] = [
     name: "Jordan Bennett",
     party: "Democratic Party",
     office: "U.S. House (sample)",
+    state: "TX",
     bio: "A pragmatic center-left candidate who favors incremental fixes, protecting existing coverage, and a pro-worker but business-friendly economy.",
     accent: "#F16B64",
     values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 1 },
@@ -70,6 +73,7 @@ export const CANDIDATES: Candidate[] = [
     name: "Sam Whitaker",
     party: "Independent",
     office: "Governor (sample)",
+    state: "PA",
     bio: "A self-described independent: a fiscal moderate and deficit hawk who leans socially liberal and pitches practical, non-partisan problem-solving.",
     accent: "#AC8798",
     values: { v_govrole: 0, v_freedom: -1, v_environment: 0, v_faith: 0, v_change: 0 },
@@ -91,6 +95,7 @@ export const CANDIDATES: Candidate[] = [
     name: "Dana Kessler",
     party: "Republican Party",
     office: "U.S. House (sample)",
+    state: "TX",
     bio: "A center-right, business-first candidate with a libertarian streak: low taxes and light regulation, but more moderate on some social questions.",
     accent: "#EC2322",
     values: { v_govrole: -1, v_freedom: -2, v_environment: -1, v_faith: 1, v_change: -1 },
@@ -112,6 +117,7 @@ export const CANDIDATES: Candidate[] = [
     name: "Grant Halloway",
     party: "Republican Party",
     office: "U.S. Senate (sample)",
+    state: "PA",
     bio: "A staunch conservative with a populist streak: traditional social values, tough on immigration and crime, protectionist on trade, and wary of foreign entanglements.",
     accent: "#1C1847",
     values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 2, v_change: -2 },
@@ -129,3 +135,22 @@ export const CANDIDATES: Candidate[] = [
     sources: SHARED_SOURCES,
   },
 ];
+
+// ---------------------------------------------------------------------------
+// State-based filtering
+// ---------------------------------------------------------------------------
+
+/** Candidates whose race is in the given state (2-letter code). */
+export function candidatesForState(stateCode: string): Candidate[] {
+  return CANDIDATES.filter((c) => c.state === stateCode);
+}
+
+/** State codes that currently have at least one sample candidate loaded. */
+export const STATES_WITH_CANDIDATES: string[] = Array.from(
+  new Set(CANDIDATES.map((c) => c.state)),
+).sort();
+
+/** Full state names for the states that have candidates (for empty-state copy). */
+export const STATE_NAMES_WITH_CANDIDATES: string[] = STATES_WITH_CANDIDATES.map(
+  (code) => US_STATES.find((s) => s.code === code)?.name ?? code,
+);

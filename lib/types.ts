@@ -58,6 +58,7 @@ export interface Candidate {
   name: string;
   party: string; // revealed only on the results screen, never during the quiz
   office: string;
+  state: string; // 2-letter code of the state this candidate is running in
   bio: string;
   accent: string; // hex used for the avatar tile
   values: Record<string, number>; // valueAxis.id -> -2..+2

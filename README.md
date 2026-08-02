@@ -64,8 +64,18 @@ candidates actually on a voter's ballot — keeping the same `positions` /
 - [Vote Smart](https://justfacts.votesmart.org)
 - [VOTE411 (League of Women Voters)](https://www.vote411.org)
 
-A natural next step is filtering candidates by the voter's `state` (and district)
-so each person sees only their real ballot.
+### State-based filtering
+
+Every candidate has a `state` (2-letter code), and results are filtered to the
+voter's registered state — each person sees only the candidates on their ballot
+(`candidatesForState` in `lib/candidates.ts`).
+
+In this demo the sample candidates live in **Pennsylvania** (a 3-way spread) and
+**Texas** (a 2-way race). Pick one of those to see a filtered slate; any other
+state shows a clear "no candidates loaded yet" message and falls back to scoring
+against the full sample set. When a state *does* have candidates, a toggle lets
+you preview all sample candidates regardless of state. A natural next step is to
+extend the filter to congressional district.
 
 ## Design
 
