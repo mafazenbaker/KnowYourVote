@@ -46,12 +46,15 @@ export default function Results({
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-8">
-      {/* Sample-data disclaimer */}
+      {/* Real-data sourcing disclaimer */}
       <div className="mb-6 rounded-xl border-l-4 border-brand-red bg-white p-4 text-sm text-brand-navy/80 shadow-card">
-        <strong className="text-brand-red">Illustrative sample data.</strong>{" "}
-        These are fictional demonstration candidates, not real people on a 2026
-        ballot. The matching engine is real — swap in vetted candidate data for
-        your district to make results live.
+        <strong className="text-brand-red">Real candidates, sourced positions.</strong>{" "}
+        Positions are mapped from each candidate&apos;s public record, campaign
+        materials, and neutral trackers (see the Sources on each card), compiled
+        August 2026. Some positions are inferred from a candidate&apos;s voting
+        record or platform where no explicit statement was found — always verify
+        against official sources before you vote. Currently covers the{" "}
+        {STATE_NAMES_WITH_CANDIDATES.join(" and ")} U.S. Senate race.
       </div>
 
       {/* Header banner */}
@@ -64,7 +67,7 @@ export default function Results({
         </h1>
         <p className="mx-auto mt-2 max-w-xl text-white/75">
           {showingFiltered
-            ? `Showing the ${inState.length} sample candidate${
+            ? `Showing the ${inState.length} candidate${
                 inState.length === 1 ? "" : "s"
               } on the ballot in ${stateName}, ranked by how closely each lines up with the ${
                 topIssues.length
@@ -99,11 +102,10 @@ export default function Results({
             No candidates are loaded for {stateName} yet
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-sm text-brand-navy/70">
-            This demo only includes sample candidates for{" "}
-            {STATE_NAMES_WITH_CANDIDATES.join(" and ")}. In a live version, your
-            state and district would load the real candidates on your ballot.
-            For now, here's how your answers would score against the full sample
-            set:
+            This tool currently covers the{" "}
+            {STATE_NAMES_WITH_CANDIDATES.join(" and ")} U.S. Senate race. More
+            states are added as their candidate data is sourced. For now, here&apos;s
+            how your answers would score against the candidates we do have:
           </p>
         </div>
       )}
@@ -114,14 +116,14 @@ export default function Results({
           <span className="text-brand-navy/60">
             {showingFiltered
               ? `On your ${stateName} ballot`
-              : "Showing all sample candidates"}
+              : "Showing all loaded candidates"}
           </span>
           <button
             onClick={() => setPreviewAll((p) => !p)}
             className="rounded-full border border-brand-navy/20 px-4 py-1.5 font-semibold text-brand-navy transition hover:bg-brand-navy/5"
           >
             {showingFiltered
-              ? "Preview all sample candidates"
+              ? "Preview all loaded candidates"
               : `Show only ${stateName} ballot`}
           </button>
         </div>
@@ -294,6 +296,12 @@ function CandidateCard({ result, rank }: { result: MatchResult; rank: number }) 
                   </li>
                 ))}
               </ul>
+              {c.sourcingNote && (
+                <p className="mt-3 rounded-lg bg-brand-paper p-3 text-xs leading-relaxed text-brand-navy/70">
+                  <strong className="text-brand-navy">How this was sourced:</strong>{" "}
+                  {c.sourcingNote}
+                </p>
+              )}
             </div>
           </div>
         )}

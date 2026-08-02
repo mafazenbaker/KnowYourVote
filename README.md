@@ -46,19 +46,33 @@ components/
 lib/
   types.ts            Shared types
   survey.ts           All questions, value axes, and issue modules
-  candidates.ts       Sample candidate dataset (SEE BELOW)
+  candidates.ts       Candidate data (SEE BELOW)
   scoring.ts          Matching engine
 ```
 
-## ⚠️ Sample data — replace before going live
+## Candidate data
 
-`lib/candidates.ts` ships with **five fictional demonstration candidates**, not
-real people. They exist only to prove the matching engine end-to-end and span
-the political spectrum (with deliberate cross-cutting positions).
+`lib/candidates.ts` currently holds **real candidates for one race: the 2026
+U.S. Senate election in Maine** — Susan Collins (R, incumbent) vs. Graham
+Platner (D).
 
-To make results real, replace the `CANDIDATES` array with vetted data for the
-candidates actually on a voter's ballot — keeping the same `positions` /
-`values` keys (the question ids in `lib/survey.ts`). Good neutral sources:
+Their positions are mapped onto the app's −2…+2 scale from public records,
+campaign materials, voting history, and neutral trackers (each candidate lists
+its `sources`). Where a candidate has a clear documented stance, the mapping
+reflects it; where none was found, the value is inferred from their record or
+platform and called out in that candidate's `sourcingNote` (shown to users as
+"How this was sourced"). Positions were compiled **August 2026** and are a
+point-in-time snapshot — verify against official sources before voting.
+
+> **Sourcing note.** This is a decision-support tool, not an authority. Every
+> position should be checked against primary sources. Do not present inferred
+> positions as a candidate's official stance.
+
+### Adding more races
+
+Append candidates to the `CANDIDATES` array using the same `positions` /
+`values` keys (the question ids in `lib/survey.ts`) and set each one's `state`.
+Good neutral sources:
 
 - [Ballotpedia](https://ballotpedia.org)
 - [Vote Smart](https://justfacts.votesmart.org)
@@ -68,13 +82,9 @@ candidates actually on a voter's ballot — keeping the same `positions` /
 
 Every candidate has a `state` (2-letter code), and results are filtered to the
 voter's registered state — each person sees only the candidates on their ballot
-(`candidatesForState` in `lib/candidates.ts`).
-
-In this demo the sample candidates live in **Pennsylvania** (a 3-way spread) and
-**Texas** (a 2-way race). Pick one of those to see a filtered slate; any other
-state shows a clear "no candidates loaded yet" message and falls back to scoring
-against the full sample set. When a state *does* have candidates, a toggle lets
-you preview all sample candidates regardless of state. A natural next step is to
+(`candidatesForState` in `lib/candidates.ts`). States without loaded candidates
+show a clear "currently covers …" message. When a state *does* have candidates,
+a toggle lets the user preview all loaded candidates. A natural next step is to
 extend the filter to congressional district.
 
 ## Design

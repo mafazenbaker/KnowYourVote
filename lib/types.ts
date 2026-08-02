@@ -64,6 +64,8 @@ export interface Candidate {
   values: Record<string, number>; // valueAxis.id -> -2..+2
   positions: Record<string, number>; // issue question id -> -2..+2
   sources: { label: string; url: string }[];
+  /** Transparency note: how positions were compiled, and any caveats. */
+  sourcingNote?: string;
 }
 
 /** The full set of answers a voter accumulates. */
