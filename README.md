@@ -89,11 +89,11 @@ extend the filter to congressional district.
 
 ## Design
 
-The look follows the provided references: the `Interface.pdf` wireframe
-(header → description → survey → outcomes), the patriotic brand palette in
-`brandcolors.png` (`#EC2322` red, `#F16B64` coral, `#1C1847` navy, `#EEE7E6`
-off-white, `#AC8798` mauve — see `tailwind.config.ts`), and the card-based layout
-of `examplewebsite.jpg`.
+The look follows the provided references (kept in [`design/`](design/)): the
+`Interface.pdf` wireframe (header → description → survey → outcomes), the
+patriotic brand palette in `brandcolors.png` (`#EC2322` red, `#F16B64` coral,
+`#1C1847` navy, `#EEE7E6` off-white, `#AC8798` mauve — see `tailwind.config.ts`),
+and the card-based layout of `examplewebsite.jpg`.
 
 ## Privacy
 
