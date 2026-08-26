@@ -1,5 +1,3 @@
-import { ISSUES } from "@/lib/survey";
-
 export default function Landing({ onStart }: { onStart: () => void }) {
   return (
     <div className="animate-fade-up">
@@ -69,23 +67,6 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               <p className="mt-2 text-brand-navy/70">{s.d}</p>
             </div>
           ))}
-        </div>
-
-        {/* Issues covered */}
-        <div className="mt-12 rounded-2xl bg-brand-paper p-6">
-          <p className="text-center text-sm font-semibold uppercase tracking-wide text-brand-navy/60">
-            Issues we cover
-          </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-            {ISSUES.map((i) => (
-              <span
-                key={i.id}
-                className="rounded-full border border-brand-navy/15 bg-white px-4 py-2 text-sm font-medium text-brand-navy"
-              >
-                <span aria-hidden>{i.icon}</span> {i.label}
-              </span>
-            ))}
-          </div>
         </div>
 
         {/* Neutrality note */}
