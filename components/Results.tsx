@@ -9,6 +9,7 @@ import {
 } from "@/lib/candidates";
 import { rankCandidates, priorityIssues } from "@/lib/scoring";
 import { US_STATES } from "@/lib/survey";
+import { IssueIcon, BallotIcon, StarIcon } from "./icons";
 
 function matchColor(pct: number) {
   if (pct >= 75) return "#1C1847";
@@ -83,9 +84,9 @@ export default function Results({
             {topIssues.map((i) => (
               <span
                 key={i.id}
-                className="rounded-full bg-white/10 px-3 py-1 text-sm"
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm"
               >
-                {i.icon} {i.label}
+                <IssueIcon id={i.id} className="h-4 w-4" /> {i.label}
               </span>
             ))}
           </div>
@@ -95,9 +96,7 @@ export default function Results({
       {/* No candidates loaded for this state */}
       {!hasStateCandidates && (
         <div className="mt-6 rounded-2xl border border-brand-navy/10 bg-white p-6 text-center shadow-card">
-          <p className="text-2xl" aria-hidden>
-            🗳️
-          </p>
+          <BallotIcon className="mx-auto h-8 w-8 text-brand-navy" />
           <h2 className="mt-2 font-display text-xl font-bold text-brand-navy">
             No candidates are loaded for {stateName} yet
           </h2>
@@ -184,8 +183,8 @@ function CandidateCard({ result, rank }: { result: MatchResult; rank: number }) 
       }`}
     >
       {rank === 1 && (
-        <div className="bg-brand-red px-6 py-2 text-center text-sm font-bold uppercase tracking-wide text-white">
-          ★ Closest match
+        <div className="flex items-center justify-center gap-1.5 bg-brand-red px-6 py-2 text-center text-sm font-bold uppercase tracking-wide text-white">
+          <StarIcon className="h-4 w-4" /> Closest match
         </div>
       )}
       <div className="p-6">

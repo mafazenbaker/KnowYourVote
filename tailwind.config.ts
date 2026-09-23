@@ -18,7 +18,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
+        // Display headings now use the same sans-serif stack as body text.
+        display: ["var(--font-sans)", "system-ui", "sans-serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       boxShadow: {

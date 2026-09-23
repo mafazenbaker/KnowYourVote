@@ -13,6 +13,7 @@ import {
   US_STATES,
 } from "@/lib/survey";
 import { PRIORITY_THRESHOLD } from "@/lib/scoring";
+import { IssueIcon } from "./icons";
 
 type Step =
   | { kind: "phase"; phase: Phase; label: string }
@@ -212,7 +213,7 @@ function CardShell({
   subtitle,
   children,
 }: {
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   children: React.ReactNode;
 }) {
@@ -374,9 +375,7 @@ function PrioritiesView({
             className="rounded-xl border border-brand-navy/10 p-4"
           >
             <div className="flex items-center gap-2">
-              <span aria-hidden className="text-xl">
-                {issue.icon}
-              </span>
+              <IssueIcon id={issue.id} className="h-6 w-6 flex-shrink-0 text-brand-navy" />
               <div>
                 <p className="font-semibold text-brand-navy">{issue.label}</p>
                 <p className="text-sm text-brand-navy/60">{issue.blurb}</p>
@@ -418,7 +417,12 @@ function IssueView({
 }) {
   return (
     <CardShell
-      title={`${issue.icon}  ${issue.label}`}
+      title={
+        <span className="inline-flex items-center gap-2">
+          <IssueIcon id={issue.id} className="h-7 w-7 text-brand-navy" />
+          {issue.label}
+        </span>
+      }
       subtitle="Pick the option closest to your view for each question."
     >
       {issue.questions.map((q) => (
