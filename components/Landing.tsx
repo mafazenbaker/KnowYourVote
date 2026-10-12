@@ -8,14 +8,14 @@ export default function Landing({ onStart }: { onStart: () => void }) {
             Find your match before you fill in the ballot
           </p>
           <h1
-            className="mx-auto max-w-3xl text-4xl font-bold leading-tight sm:text-5xl"
+            className="mx-auto max-w-3xl text-[2.59rem] font-bold leading-tight sm:text-[3.45rem]"
             style={{ fontFamily: '"Times New Roman", Times, serif' }}
           >
             Answer a few questions.
             <br />
             See which candidates relate to you.
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-white/80">
+          <p className="mx-auto mt-5 max-w-2xl text-[0.9rem] text-white/80">
             KnowTheVote walks you through a short, neutral survey about your
             life, your values, and the issues you care about — then compares
             your answers to the candidates on your ballot and explains{" "}
