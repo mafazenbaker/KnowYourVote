@@ -39,8 +39,7 @@ export default function Home() {
       )}
 
       <footer className="border-t border-brand-navy/10 bg-white py-6 text-center text-xs text-brand-navy/50">
-        KnowTheVote · A nonpartisan tool to help you decide · Your answers stay
-        in your browser
+        KnowTheVote · A nonpartisan tool to help you decide
       </footer>
     </main>
   );
