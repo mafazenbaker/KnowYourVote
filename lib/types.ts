@@ -1,4 +1,4 @@
-// Core data types for the KnowTheVote survey + matching engine.
+// Core data types for the KnowYourVote survey + matching engine.
 
 /** A selectable answer. `value` is the stance on this question's -2..+2 axis
  *  (only present for scored questions used in matching). */

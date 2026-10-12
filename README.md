@@ -1,9 +1,9 @@
-# KnowTheVote
+# KnowYourVote
 
 A nonpartisan web app that helps people decide who to vote for in the
 **November 2026 election**. Voters answer a short, plain-language survey about
 their background, economic situation, values, and the issues they care about.
-KnowTheVote compares those answers to the candidates on their ballot and returns
+KnowYourVote compares those answers to the candidates on their ballot and returns
 a ranked list of matches — each with a match score, the specific points of
 agreement and disagreement, and the sources behind the data.
 
