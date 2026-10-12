@@ -13,7 +13,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
             See which candidates actually fit you.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-white/80">
-            BallotMatch walks you through a short, neutral survey about your
+            KnowTheVote walks you through a short, neutral survey about your
             life, your values, and the issues you care about — then compares
             your answers to the candidates on your ballot and explains{" "}
             <em>why</em> each one was suggested.

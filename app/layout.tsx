@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BallotMatch — Find the candidates who match your values",
+  title: "KnowTheVote — Find the candidates who match your values",
   description:
-    "Answer a short, neutral survey about your background, economic situation, values, and priorities. BallotMatch compares your answers to candidates on your ballot and explains why each match was suggested.",
+    "Answer a short, neutral survey about your background, economic situation, values, and priorities. KnowTheVote compares your answers to candidates on your ballot and explains why each match was suggested.",
 };
 
 export default function RootLayout({

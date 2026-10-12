@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ballotmatch.app/schema/candidate-dataset.schema.json",
-  "title": "BallotMatch candidate dataset",
+  "$id": "https://knowthevote.app/schema/candidate-dataset.schema.json",
+  "title": "KnowTheVote candidate dataset",
   "description": "The target shape an ingestion pipeline writes. Each candidate's `positions` and `values` are keyed to the question/axis ids defined in lib/survey.ts and scored by lib/scoring.ts. Validate pipeline output against this file before loading it into the app.",
   "type": "object",
   "required": ["candidates"],

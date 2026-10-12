@@ -12,7 +12,7 @@ export default function Header({ compact = false }: { compact?: boolean }) {
             <StarIcon className="h-5 w-5" />
           </span>
           <span className="text-xl font-bold tracking-tight">
-            Ballot<span className="text-brand-coral">Match</span>
+            KnowThe<span className="text-brand-coral">Vote</span>
           </span>
         </div>
         {!compact && (
