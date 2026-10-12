@@ -8,7 +8,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
             Find your match before you fill in the ballot
           </p>
           <h1
-            className="mx-auto max-w-3xl text-[2.59rem] font-bold leading-tight sm:text-[3.45rem]"
+            className="mx-auto max-w-3xl text-[2.85rem] font-bold leading-tight tracking-[0.05em] sm:text-[3.8rem]"
             style={{ fontFamily: '"Times New Roman", Times, serif' }}
           >
             Answer a few questions.
