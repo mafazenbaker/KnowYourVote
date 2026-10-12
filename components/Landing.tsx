@@ -16,8 +16,8 @@ export default function Landing({ onStart }: { onStart: () => void }) {
             stand where you stand
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[0.9rem] text-white/80">
-            KnowYourVote walks you through a short, neutral survey about your
-            life, your values, and the issues you care about — then compares
+            KnowYourVote walks you through a short, neutral survey about who you
+            are, your values, and the issues you care about — then compares
             your answers to the candidates on your ballot and explains{" "}
             <em>why</em> each one was suggested.
           </p>
