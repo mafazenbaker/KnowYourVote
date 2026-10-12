@@ -7,10 +7,13 @@ export default function Landing({ onStart }: { onStart: () => void }) {
           <p className="mb-4 inline-block rounded-full bg-white/10 px-4 py-1 text-sm font-medium text-brand-coral">
             Find your match before you fill in the ballot
           </p>
-          <h1 className="mx-auto max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl">
-            Answer a few honest questions.
+          <h1
+            className="mx-auto max-w-3xl text-4xl font-bold leading-tight sm:text-5xl"
+            style={{ fontFamily: '"Times New Roman", Times, serif' }}
+          >
+            Answer a few questions.
             <br />
-            See which candidates actually fit you.
+            See which candidates relate to you.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-white/80">
             KnowTheVote walks you through a short, neutral survey about your
