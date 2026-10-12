@@ -11,9 +11,9 @@ export default function Landing({ onStart }: { onStart: () => void }) {
             className="mx-auto max-w-3xl text-[2.85rem] font-bold leading-tight tracking-[-0.03em] sm:text-[3.8rem]"
             style={{ fontFamily: '"Times New Roman", Times, serif' }}
           >
-            Answer a few questions.
+            Find the candidates who
             <br />
-            See which candidates relate to you.
+            stand where you stand
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[0.9rem] text-white/80">
             KnowTheVote walks you through a short, neutral survey about your
