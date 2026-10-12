@@ -43,12 +43,12 @@ export default function Landing({ onStart }: { onStart: () => void }) {
           {[
             {
               n: "1",
-              t: "Tell us about you",
+              t: "Who are you",
               d: "Your background, economic situation, core values, and the state where you're registered to vote.",
             },
             {
               n: "2",
-              t: "Rank what matters",
+              t: "What matters",
               d: "Pick the issues you care about most. We only ask deeper questions about the ones you choose.",
             },
             {
@@ -70,14 +70,6 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               <p className="mt-2 text-brand-navy/70">{s.d}</p>
             </div>
           ))}
-        </div>
-
-        {/* Neutrality note */}
-        <div className="mx-auto mt-10 max-w-2xl rounded-xl border-l-4 border-brand-coral bg-white p-5 text-sm text-brand-navy/80 shadow-card">
-          <strong className="text-brand-navy">Built to be neutral.</strong>{" "}
-          Questions use plain, non-leading language, no party labels appear while
-          you answer, and every candidate is measured against the same questions
-          and the same sources.
         </div>
       </section>
     </div>
