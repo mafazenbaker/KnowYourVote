@@ -61,7 +61,7 @@ export default function Landing({ onStart }: { onStart: () => void }) {
               key={s.n}
               className="rounded-2xl border border-brand-navy/10 bg-white p-6 shadow-card"
             >
-              <div className="grid h-10 w-10 place-items-center rounded-full bg-brand-navy text-lg font-bold text-white">
+              <div className="grid h-10 w-10 place-items-center rounded-full bg-brand-red text-lg font-bold text-white">
                 {s.n}
               </div>
               <h3 className="mt-4 text-lg font-semibold text-brand-navy">
