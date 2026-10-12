@@ -328,7 +328,17 @@ function Section({
             <div className="flex items-start gap-2">
               <span className={`mt-1.5 h-2 w-2 flex-shrink-0 rounded-full ${dot}`} />
               <div>
-                <p className="text-brand-navy/80">{it.questionText}</p>
+                <p className="text-brand-navy/80">
+                  {it.questionText}
+                  {it.confidence === "low" && (
+                    <span
+                      title="This position was inferred from the candidate's record or platform, not an explicit statement."
+                      className="ml-1.5 whitespace-nowrap rounded-full bg-brand-paper px-1.5 py-0.5 align-middle text-[11px] font-medium text-brand-navy/55"
+                    >
+                      est.
+                    </span>
+                  )}
+                </p>
                 <p className="text-brand-navy/55">
                   You: <em>{it.voterLabel}</em> · Them:{" "}
                   <em>{it.candidateLabel}</em>

@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ballotmatch.app/schema/candidate-dataset.schema.json",
+  "title": "BallotMatch candidate dataset",
+  "description": "The target shape an ingestion pipeline writes. Each candidate's `positions` and `values` are keyed to the question/axis ids defined in lib/survey.ts and scored by lib/scoring.ts. Validate pipeline output against this file before loading it into the app.",
+  "type": "object",
+  "required": ["candidates"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema/data version, e.g. \"1.0.0\"."
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this dataset was produced by the pipeline."
+    },
+    "source": {
+      "type": "string",
+      "description": "Which pipeline/run produced this (e.g. \"openstates-etl@2026-10\")."
+    },
+    "candidates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/candidate" }
+    }
+  },
+  "$defs": {
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "high = explicit documented stance; medium = partly interpreted; low = inferred from record/platform with no explicit statement."
+    },
+    "stance": {
+      "type": "integer",
+      "minimum": -2,
+      "maximum": 2,
+      "description": "Position on the question's -2..+2 axis."
+    },
+    "stateCode": {
+      "type": "string",
+      "enum": [
+        "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID",
+        "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS",
+        "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
+        "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
+        "WI", "WY", "DC"
+      ]
+    },
+    "valueKey": {
+      "type": "string",
+      "enum": ["v_govrole", "v_freedom", "v_environment", "v_faith", "v_change"]
+    },
+    "positionKey": {
+      "type": "string",
+      "description": "An issue-module question id from lib/survey.ts.",
+      "enum": [
+        "hc_coverage", "hc_drugs", "hc_preexisting", "hc_medicaid", "hc_costs",
+        "ec_taxes", "ec_wage", "ec_spending", "ec_trade", "ec_labor",
+        "im_undocumented", "im_border", "im_levels", "im_daca", "im_asylum",
+        "ed_k12", "ed_debt", "ed_college", "ed_curriculum", "ed_prek",
+        "cl_urgency", "cl_fossil", "cl_renew", "cl_carbon", "cl_tradeoff",
+        "cj_police", "cj_sentencing", "cj_guns", "cj_drugs", "cj_death",
+        "so_abortion", "so_lgbtq", "so_religion", "so_voting", "so_dei",
+        "fp_military", "fp_aid", "fp_intervention", "fp_alliances", "fp_china",
+        "ho_afford", "ho_zoning", "ho_renters", "ho_homeless", "ho_ownership"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": ["label", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "id", "name", "party", "office", "state", "bio", "accent",
+        "values", "positions", "sources"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Stable unique slug, e.g. \"collins-me-sen\"."
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "party": { "type": "string", "minLength": 1 },
+        "office": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable race, e.g. \"U.S. Senate — Maine\"."
+        },
+        "state": { "$ref": "#/$defs/stateCode" },
+        "bio": { "type": "string", "minLength": 1 },
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Hex color for the avatar tile."
+        },
+        "values": {
+          "type": "object",
+          "description": "Stance on each core-value axis.",
+          "propertyNames": { "$ref": "#/$defs/valueKey" },
+          "additionalProperties": { "$ref": "#/$defs/stance" }
+        },
+        "positions": {
+          "type": "object",
+          "description": "Stance on each issue question. Only valid question ids are allowed; gaps are permitted (an unscored question is simply skipped).",
+          "propertyNames": { "$ref": "#/$defs/positionKey" },
+          "additionalProperties": { "$ref": "#/$defs/stance" }
+        },
+        "positionConfidence": {
+          "type": "object",
+          "description": "Per-key confidence, keyed by position or value ids. Any key omitted is treated as \"high\".",
+          "propertyNames": {
+            "anyOf": [
+              { "$ref": "#/$defs/positionKey" },
+              { "$ref": "#/$defs/valueKey" }
+            ]
+          },
+          "additionalProperties": { "$ref": "#/$defs/confidence" }
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "description": "At least one neutral, citable source backing the positions.",
+          "items": { "$ref": "#/$defs/source" }
+        },
+        "sourcingNote": {
+          "type": "string",
+          "description": "How positions were compiled and which are lower confidence. Shown to users."
+        }
+      }
+    }
+  }
+}

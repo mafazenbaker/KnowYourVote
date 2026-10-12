@@ -68,6 +68,12 @@ point-in-time snapshot — verify against official sources before voting.
 > position should be checked against primary sources. Do not present inferred
 > positions as a candidate's official stance.
 
+Each position also carries a **confidence** (`high` / `medium` / `low`) in the
+candidate's optional `positionConfidence` map — keyed by the same
+position/value ids, with anything omitted treated as `high`. Low-confidence
+items (inferred, not explicitly stated) are tagged **"est."** in the results UI
+so users can tell sourced stances from estimates.
+
 ### Adding more races
 
 Append candidates to the `CANDIDATES` array using the same `positions` /
@@ -77,6 +83,24 @@ Good neutral sources:
 - [Ballotpedia](https://ballotpedia.org)
 - [Vote Smart](https://justfacts.votesmart.org)
 - [VOTE411 (League of Women Voters)](https://www.vote411.org)
+
+### Pipeline target — JSON schema
+
+For bulk/automated ingestion, write candidate data as JSON validated against
+[`schema/candidate-dataset.schema.json`](schema/candidate-dataset.schema.json)
+(JSON Schema draft 2020-12). It enumerates the valid state codes, value-axis
+keys, and all 45 issue-question keys, constrains every stance to an integer
+−2…+2, requires at least one source per candidate, and types
+`positionConfidence`. [`schema/example-dataset.json`](schema/example-dataset.json)
+is a minimal valid instance to write against. Validate pipeline output with:
+
+```bash
+npm run validate:data   # swap -d to point at your generated file(s)
+```
+
+A thin loader then maps the validated JSON into the `Candidate` type the app
+consumes. See the data-source recommendations (OpenStates/Plural, Congress.gov,
+Vote Smart, Ballotpedia, Democracy Works) for populating it across all states.
 
 ### State-based filtering
 

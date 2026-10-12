@@ -58,6 +58,11 @@ export const CANDIDATES: Candidate[] = [
       // Housing — federal support for construction, ban hedge-fund homebuying
       ho_afford: 2, ho_zoning: 1, ho_renters: 2, ho_homeless: 2, ho_ownership: 2,
     },
+    // Only non-"high" keys are listed; anything omitted is treated as "high".
+    positionConfidence: {
+      fp_aid: "low", fp_alliances: "low", fp_china: "low",
+      cj_death: "low", so_dei: "low",
+    },
     sources: [
       { label: "Campaign platform — grahamforsenate.com", url: "https://www.grahamforsenate.com/platform" },
       { label: "Ballotpedia — Graham Platner", url: "https://ballotpedia.org/Graham_Platner" },
@@ -101,6 +106,12 @@ export const CANDIDATES: Candidate[] = [
       fp_military: -1, fp_aid: 1, fp_intervention: -1, fp_alliances: 2, fp_china: -1,
       // Housing — backed bipartisan housing/homeownership legislation
       ho_afford: 1, ho_zoning: -1, ho_renters: -1, ho_homeless: -1, ho_ownership: 1,
+    },
+    // Only non-"high" keys are listed; anything omitted is treated as "high".
+    positionConfidence: {
+      v_environment: "medium",
+      cj_death: "low", so_dei: "low", so_voting: "low",
+      ho_zoning: "low", ho_renters: "low", ho_homeless: "low",
     },
     sources: [
       { label: "Ballotpedia — Susan Collins", url: "https://ballotpedia.org/Susan_Collins" },

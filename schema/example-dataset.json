@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-08-15T00:00:00Z",
+  "source": "manual-example",
+  "candidates": [
+    {
+      "id": "example-candidate",
+      "name": "Example Candidate",
+      "party": "Example Party",
+      "office": "U.S. Senate — Example State",
+      "state": "ME",
+      "bio": "A minimal, schema-valid example showing the shape an ingestion pipeline should write. Not a real person.",
+      "accent": "#1C1847",
+      "values": {
+        "v_govrole": 1,
+        "v_freedom": 0,
+        "v_environment": 1,
+        "v_faith": -1,
+        "v_change": 1
+      },
+      "positions": {
+        "hc_coverage": 1,
+        "hc_preexisting": 2,
+        "ec_taxes": 1,
+        "im_daca": 2,
+        "cl_urgency": 1,
+        "cj_guns": 1,
+        "so_abortion": 2,
+        "fp_alliances": 1,
+        "ho_afford": 1
+      },
+      "positionConfidence": {
+        "fp_alliances": "low",
+        "so_abortion": "high",
+        "v_environment": "medium"
+      },
+      "sources": [
+        { "label": "Ballotpedia — Example Candidate", "url": "https://ballotpedia.org/Example_Candidate" },
+        { "label": "Vote Smart — Example Candidate", "url": "https://justfacts.votesmart.org/candidate/0/example-candidate" }
+      ],
+      "sourcingNote": "Example only. Positions here are illustrative placeholders, not sourced from a real record."
+    }
+  ]
+}

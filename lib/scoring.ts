@@ -72,6 +72,7 @@ export function scoreCandidate(
         voterLabel: labelForValue(q, userVal),
         candidateLabel: labelForValue(q, candVal),
         distance,
+        confidence: candidate.positionConfidence?.[q.id],
       };
       if (distance <= 1) agreements.push(item);
       else if (distance >= 3) disagreements.push(item);

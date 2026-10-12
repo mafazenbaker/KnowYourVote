@@ -52,7 +52,13 @@ export interface ValueAxis {
   rightLabel: string;
 }
 
-/** An illustrative candidate. Positions are keyed by question id. */
+/** How well-established a mapped position is.
+ *  - high:   the candidate has an explicit, documented stance.
+ *  - medium: reasonably supported, but partly interpreted.
+ *  - low:    inferred from voting record / platform; no explicit statement. */
+export type Confidence = "high" | "medium" | "low";
+
+/** A candidate on a ballot. Positions are keyed by question id. */
 export interface Candidate {
   id: string;
   name: string;
@@ -63,6 +69,9 @@ export interface Candidate {
   accent: string; // hex used for the avatar tile
   values: Record<string, number>; // valueAxis.id -> -2..+2
   positions: Record<string, number>; // issue question id -> -2..+2
+  /** Per-key confidence, keyed by the same position/value ids. Missing = treat
+   *  as "high" (set it explicitly for anything inferred). */
+  positionConfidence?: Record<string, Confidence>;
   sources: { label: string; url: string }[];
   /** Transparency note: how positions were compiled, and any caveats. */
   sourcingNote?: string;
@@ -84,6 +93,7 @@ export interface AgreementItem {
   voterLabel: string;
   candidateLabel: string;
   distance: number; // 0..4
+  confidence?: Confidence; // confidence of the candidate's mapped position
 }
 
 export interface MatchResult {
