@@ -39,7 +39,19 @@ export default function Home() {
       )}
 
       <footer className="border-t border-brand-navy/10 bg-white py-6 text-center text-xs text-brand-navy/50">
-        KnowYourVote · A nonpartisan tool to help you decide
+        <p>KnowYourVote · A nonpartisan tool to help you decide</p>
+        <p className="mt-1">
+          Candidate data compiled from public sources, including{" "}
+          <a
+            href="https://ballotpedia.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-brand-navy/70 underline hover:text-brand-red"
+          >
+            Ballotpedia
+          </a>
+          .
+        </p>
       </footer>
     </main>
   );
