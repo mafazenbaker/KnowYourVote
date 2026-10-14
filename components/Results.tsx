@@ -10,6 +10,7 @@ import {
 import { rankCandidates, priorityIssues } from "@/lib/scoring";
 import { US_STATES } from "@/lib/survey";
 import { IssueIcon, BallotIcon, StarIcon } from "./icons";
+import ResultsChat from "./ResultsChat";
 
 function matchColor(pct: number) {
   if (pct >= 75) return "#1C1847";
@@ -134,6 +135,15 @@ export default function Results({
           <CandidateCard key={r.candidate.id} result={r} rank={idx + 1} />
         ))}
       </div>
+
+      {/* Ask-about-your-results chat */}
+      {results.length > 0 && (
+        <ResultsChat
+          results={results}
+          stateName={stateName}
+          topIssues={topIssues}
+        />
+      )}
 
       {/* Methodology */}
       <details className="mt-8 rounded-xl border border-brand-navy/10 bg-white p-5 text-sm text-brand-navy/80 shadow-card">
