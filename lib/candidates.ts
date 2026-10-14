@@ -407,6 +407,95 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "Abortion (six-week law), free-market healthcare / ACA opposition, tax cuts, deregulation, and hardline border security are from debate coverage and his House record. Most other positions are inferred from his Trump-aligned conservative profile and are lower confidence.",
   },
+
+  // ----- Maryland — 2026 Governor: Moore (D) vs. Cox (R) -----
+  // Governor's race: federal-issue mappings (immigration, foreign policy)
+  // reflect general political alignment and are lower confidence.
+  {
+    id: "moore-md-gov",
+    name: "Wes Moore",
+    party: "Democratic Party",
+    office: "Governor — Maryland",
+    state: "MD",
+    bio: "Democratic incumbent governor seeking a second term on his record: child-poverty reduction, education (the Blueprint), public safety and falling violent crime, middle-class tax cuts, abortion and trans-care protections, a semiautomatic-weapons ban, clean energy, and housing expansion.",
+    accent: "#1C1847",
+    values: {
+      v_govrole: 2, v_freedom: 2, v_environment: 1, v_faith: -1, v_change: 1,
+    },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 2, ec_spending: 2, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 1, im_border: 0, im_levels: 0, im_daca: 1, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 2,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 2, cl_carbon: 1, cl_tradeoff: 1,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 2, cj_drugs: 2, cj_death: 1,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 0, fp_intervention: 0, fp_alliances: 0, fp_china: 0,
+      ho_afford: 1, ho_zoning: 2, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "medium", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "medium",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "medium", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "high", cj_drugs: "medium", cj_death: "low",
+      so_lgbtq: "medium", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "medium", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Wes Moore", url: "https://ballotpedia.org/Wes_Moore" },
+      { label: "Maryland Matters — Moore on abortion & trans-care protections", url: "https://marylandmatters.org/2023/05/03/moore-declares-maryland-a-safe-haven-for-abortion-access-approves-protections-for-trans-health-care/" },
+      { label: "Giffords — Wes Moore (gun safety)", url: "https://giffords.org/candidates/wes-moore/" },
+      { label: "Smarter.vote — Wes Moore", url: "https://smarter.vote/races/md-governor-2026/wes-moore/" },
+    ],
+    sourcingNote:
+      "Abortion/trans protections, the semiautomatic-weapons ban, cannabis policy, clean energy, housing expansion, and education (the Blueprint) are from his gubernatorial record. This is a governor's race, so federal items (immigration, foreign policy, ACA/Medicare specifics) reflect his general Democratic alignment and are lower confidence.",
+  },
+  {
+    id: "cox-md-gov",
+    name: "Dan Cox",
+    party: "Republican Party",
+    office: "Governor — Maryland",
+    state: "MD",
+    bio: "Republican nominee and former state delegate, a Trump-aligned conservative running on Maryland's 'affordability crisis': cut taxes and fees, cap property-tax assessments, pro-life, pro-gun (supports constitutional carry, opposes bans), and bringing power plants back online.",
+    accent: "#EC2322",
+    values: {
+      v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 2, v_change: -2,
+    },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 0, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -1, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: 0, fp_aid: 0, fp_intervention: 0, fp_alliances: 0, fp_china: 0,
+      ho_afford: -2, ho_zoning: -1, ho_renters: -2, ho_homeless: -2, ho_ownership: -1,
+    },
+    positionConfidence: {
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "medium", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "medium", cl_renew: "medium", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "high", so_lgbtq: "low", so_religion: "medium", so_voting: "medium", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Dan Cox", url: "https://ballotpedia.org/Dan_Cox" },
+      { label: "The Daily Record — 2026 Maryland governor debate", url: "https://thedailyrecord.com/2026/10/06/governor-debate-wes-moore-dan-cox/" },
+      { label: "OnTheIssues — Dan Cox", url: "https://www.ontheissues.org/Dan_Cox.htm" },
+      { label: "Smarter.vote — Dan Cox", url: "https://smarter.vote/races/md-governor-2026/dan-cox/" },
+    ],
+    sourcingNote:
+      "Abortion (pro-life, co-sponsored heartbeat bills), guns (constitutional carry, opposes bans), energy (bring power plants back; opposes climate-based utility regulation), and cutting taxes/fees are from his record and campaign. His campaign site is thin on specifics; other positions are inferred from his Trump-aligned conservative profile and are lower confidence. Governor's race, so federal items reflect general alignment.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
