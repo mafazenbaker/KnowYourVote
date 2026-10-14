@@ -232,17 +232,27 @@ export const ECONOMIC_PHASE: Phase = {
   ],
 };
 
-export const STATE_PHASE: Phase = {
-  id: "statecontext",
-  title: "Where you vote",
+// Asked first, before the rest of the survey, so we can check whether we have
+// candidate data for the voter's state before they invest time answering.
+export const STATE_PICK_PHASE: Phase = {
+  id: "statepick",
+  title: "Where do you vote?",
   subtitle:
-    "Your state decides which races are on your ballot. The rest helps us focus your results.",
+    "Your state decides which races are on your ballot, so we start here.",
   questions: [
     {
       id: "state",
       text: "Which state are you registered to vote in?",
       type: "state",
     },
+  ],
+};
+
+export const STATE_PHASE: Phase = {
+  id: "statecontext",
+  title: "Your area",
+  subtitle: "A little more about your local elections helps focus your results.",
+  questions: [
     {
       id: "level",
       text: "Which elections do you care about most this year?",
@@ -351,6 +361,7 @@ export const VOTING_PHASE: Phase = {
 };
 
 export const CONTEXT_PHASES: Phase[] = [
+  STATE_PICK_PHASE,
   BACKGROUND_PHASE,
   ECONOMIC_PHASE,
   STATE_PHASE,

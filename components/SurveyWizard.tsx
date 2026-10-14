@@ -3,9 +3,9 @@
 import { useMemo, useState } from "react";
 import type { Answers, Issue, Phase, Question } from "@/lib/types";
 import {
-  CONTEXT_PHASES,
   BACKGROUND_PHASE,
   ECONOMIC_PHASE,
+  STATE_PICK_PHASE,
   STATE_PHASE,
   VOTING_PHASE,
   VALUE_AXES,
@@ -13,6 +13,10 @@ import {
   US_STATES,
 } from "@/lib/survey";
 import { PRIORITY_THRESHOLD } from "@/lib/scoring";
+import {
+  STATES_WITH_CANDIDATES,
+  STATE_NAMES_WITH_CANDIDATES,
+} from "@/lib/candidates";
 import { IssueIcon } from "./icons";
 
 type Step =
@@ -52,6 +56,7 @@ export default function SurveyWizard({
       (i) => (answers.priorities[i.id] ?? 0) >= PRIORITY_THRESHOLD,
     );
     return [
+      { kind: "phase", phase: STATE_PICK_PHASE, label: "Your state" },
       { kind: "phase", phase: BACKGROUND_PHASE, label: "About you" },
       { kind: "phase", phase: ECONOMIC_PHASE, label: "Economics" },
       { kind: "values", label: "Your values" },
@@ -59,7 +64,7 @@ export default function SurveyWizard({
       ...priorityIssues.map(
         (issue): Step => ({ kind: "issue", issue, label: issue.label }),
       ),
-      { kind: "phase", phase: STATE_PHASE, label: "Where you vote" },
+      { kind: "phase", phase: STATE_PHASE, label: "Your area" },
       { kind: "phase", phase: VOTING_PHASE, label: "Voting history" },
     ];
   }, [answers.priorities]);
@@ -67,6 +72,13 @@ export default function SurveyWizard({
   const step = steps[Math.min(index, steps.length - 1)];
   const isLast = index === steps.length - 1;
   const progress = Math.round((index / steps.length) * 100);
+
+  // State-gate helpers (first step).
+  const onStatePick = step.kind === "phase" && step.phase.id === "statepick";
+  const stateUnsupported =
+    !!answers.state && !STATES_WITH_CANDIDATES.includes(answers.state);
+  const stateName =
+    US_STATES.find((s) => s.code === answers.state)?.name ?? "that state";
 
   // ---- answer setters -----------------------------------------------------
   const setContext = (qid: string, val: string | string[] | number) => {
@@ -92,6 +104,12 @@ export default function SurveyWizard({
 
   // ---- validation ---------------------------------------------------------
   function stepComplete(s: Step): boolean {
+    if (s.kind === "phase" && s.phase.id === "statepick") {
+      // Must pick a state we actually have candidate data for.
+      return (
+        !!answers.state && STATES_WITH_CANDIDATES.includes(answers.state)
+      );
+    }
     if (s.kind === "phase") {
       return s.phase.questions.every((q) => {
         if (q.optional) return true;
@@ -177,11 +195,26 @@ export default function SurveyWizard({
         )}
       </div>
 
-      {showError && !stepComplete(step) && (
+      {/* State not covered yet — shown as soon as an unsupported state is picked */}
+      {onStatePick && stateUnsupported && (
+        <div className="mt-6 rounded-xl border-l-4 border-brand-red bg-white p-4 text-sm text-brand-navy/80 shadow-card">
+          <strong className="text-brand-red">
+            Candidate information for {stateName} isn&apos;t available yet.
+          </strong>{" "}
+          KnowYourVote currently covers{" "}
+          {STATE_NAMES_WITH_CANDIDATES.join(", ").replace(/, ([^,]*)$/, " and $1")}.
+          Choose one of those to continue — we&apos;re adding more states as their
+          candidate data is sourced.
+        </div>
+      )}
+
+      {showError && !stepComplete(step) && !(onStatePick && stateUnsupported) && (
         <p className="mt-6 rounded-lg bg-brand-red/10 px-4 py-3 text-sm font-medium text-brand-red">
           {step.kind === "priorities"
             ? "Please mark at least one issue as “Important” or “Top priority” so we can match you."
-            : "Please answer the required questions before continuing."}
+            : onStatePick
+              ? "Please select your state to continue."
+              : "Please answer the required questions before continuing."}
         </p>
       )}
 
