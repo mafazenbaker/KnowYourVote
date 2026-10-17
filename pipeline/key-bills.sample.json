@@ -1,0 +1,35 @@
+{
+  "_comment": [
+    "Curation config for the position-inference step (built on top of rosters).",
+    "Maps KnowYourVote issue-question ids (see lib/survey.ts) to signal bills.",
+    "For each question, list signal bills. If a member SPONSORED or COSPONSORED",
+    "the bill, that implies the given `stance` on the -2..+2 axis. The inference",
+    "step queries each incumbent's cosponsored-legislation from Congress.gov and",
+    "applies these rules, emitting positions at the given `confidence` with a",
+    "sourcingNote and a NEEDS_REVIEW flag. This is a curated, human-reviewed",
+    "heuristic — it is not a substitute for reading the record.",
+    "Bill id format: {congress}-{type}-{number}, e.g. 119-hr-1. Find ids on",
+    "congress.gov. These two entries are ILLUSTRATIVE placeholders — replace",
+    "them with vetted signal bills for the current Congress before relying on it."
+  ],
+  "version": "0.1.0",
+  "congress": 119,
+  "signals": {
+    "hc_preexisting": [
+      {
+        "bill": "119-hr-0000",
+        "title": "(example) Protect Pre-Existing Conditions Act",
+        "stance": 2,
+        "confidence": "low"
+      }
+    ],
+    "cj_guns": [
+      {
+        "bill": "119-s-0000",
+        "title": "(example) Universal Background Checks Act",
+        "stance": 1,
+        "confidence": "low"
+      }
+    ]
+  }
+}

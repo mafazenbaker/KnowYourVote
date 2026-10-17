@@ -30,4 +30,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# data pipeline — secrets, local config, and generated output
+pipeline/.env
+pipeline/key-bills.json
+pipeline/out/
+
 # design source files (kept in repo root for reference, ignore large binaries if desired)

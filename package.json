@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "validate:data": "ajv validate --spec=draft2020 -c ajv-formats --strict=false -s schema/candidate-dataset.schema.json -d \"schema/example-dataset.json\""
+    "validate:data": "ajv validate --spec=draft2020 -c ajv-formats --strict=false -s schema/candidate-dataset.schema.json -d \"schema/example-dataset.json\"",
+    "pipeline:rosters": "node --env-file-if-exists=pipeline/.env pipeline/fetch-rosters.mjs"
   },
   "dependencies": {
     "next": "14.2.5",
