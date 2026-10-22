@@ -1823,6 +1823,174 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "A natural-resource-focused, lower-tax, pro-life, pro-2A conservative from his Oregon legislative record. His national-issue positions are inferred from that profile and are mostly lower confidence.",
   },
+
+  // ----- California — 2026 Governor: Becerra (D) vs. Hilton (R) -----
+  // Governor's race: federal-issue mappings reflect general alignment.
+  {
+    id: "becerra-ca-gov",
+    name: "Xavier Becerra",
+    party: "Democratic Party",
+    office: "Governor — California",
+    state: "CA",
+    bio: "Democratic nominee for the open governorship (Newsom is term-limited), former U.S. Health and Human Services Secretary and California Attorney General. A healthcare and immigrant-rights champion who backs expanding coverage, climate action, labor, abortion rights, and housing investment.",
+    accent: "#1C1847",
+    values: { v_govrole: 2, v_freedom: 2, v_environment: 2, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 2, hc_drugs: 2, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 2,
+      ec_taxes: 2, ec_wage: 2, ec_spending: 2, ec_trade: 1, ec_labor: 2,
+      // Immigration — as AG he repeatedly sued to defend immigrants (signature)
+      im_undocumented: 2, im_border: 1, im_levels: 2, im_daca: 2, im_asylum: 2,
+      ed_k12: 2, ed_debt: 2, ed_college: 2, ed_curriculum: 1, ed_prek: 2,
+      cl_urgency: 2, cl_fossil: 2, cl_renew: 2, cl_carbon: 2, cl_tradeoff: 2,
+      cj_police: 1, cj_sentencing: 2, cj_guns: 2, cj_drugs: 2, cj_death: 2,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 2,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 2, ho_zoning: 1, ho_renters: 2, ho_homeless: 2, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "medium", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "medium",
+      ec_taxes: "medium", ec_wage: "medium", ec_spending: "low", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "medium", im_border: "low", im_levels: "medium", im_daca: "medium", im_asylum: "medium",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "medium",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "medium", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "medium", so_dei: "medium",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "low", ho_homeless: "medium", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Xavier Becerra", url: "https://ballotpedia.org/Xavier_Becerra" },
+      { label: "CalMatters — 2026 governor candidates", url: "https://calmatters.org/california-voter-guide-2026/governor/" },
+      { label: "KQED — California governor voter guide", url: "https://www.kqed.org/voterguide/california/governor" },
+    ],
+    sourcingNote:
+      "Healthcare (ex-HHS Secretary), immigrant rights (ex-AG), climate, labor, and abortion rights are from his record. This is a governor's race, so federal items reflect his general Democratic alignment and are lower confidence.",
+  },
+  {
+    id: "hilton-ca-gov",
+    name: "Steve Hilton",
+    party: "Republican Party",
+    office: "Governor — California",
+    state: "CA",
+    bio: "Republican nominee, a businessman and conservative commentator running on cutting taxes, spending and regulation to grow the economy — and on eliminating California's climate programs to lower gas and electricity costs. A populist outsider aligned with President Trump.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -1 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 0, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      // Climate — campaigns on eliminating climate programs (signature)
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -1, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      // Housing — deregulate to build
+      ho_afford: -2, ho_zoning: -1, ho_renters: -2, ho_homeless: -2, ho_ownership: -1,
+    },
+    positionConfidence: {
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "medium", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "medium", cl_renew: "medium", cl_carbon: "medium", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "medium",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "low", ho_homeless: "medium", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Steve Hilton", url: "https://ballotpedia.org/Steve_Hilton" },
+      { label: "CalMatters — 2026 governor candidates", url: "https://calmatters.org/california-voter-guide-2026/governor/" },
+      { label: "KQED — California governor voter guide", url: "https://www.kqed.org/voterguide/california/governor" },
+    ],
+    sourcingNote:
+      "Cutting taxes/spending/regulation and eliminating climate programs are central campaign themes. This is a governor's race, so federal items reflect his general conservative alignment and are lower confidence.",
+  },
+
+  // ----- New York — 2026 Governor: Hochul (D) vs. Blakeman (R) -----
+  {
+    id: "hochul-ny-gov",
+    name: "Kathy Hochul",
+    party: "Democratic Party",
+    office: "Governor — New York",
+    state: "NY",
+    bio: "Democratic incumbent governor seeking reelection on child care, public safety paired with gun-safety laws, defending Medicaid, abortion rights, and climate — with pragmatic, sometimes centrist moves (she rolled back parts of bail reform and navigated the NYC migrant influx).",
+    accent: "#1C1847",
+    values: { v_govrole: 2, v_freedom: 2, v_environment: 1, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 2, ec_spending: 2, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 2,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 2, cl_carbon: 1, cl_tradeoff: 1,
+      // Justice — gun-safety laws, but tempered bail reform
+      cj_police: 1, cj_sentencing: 0, cj_guns: 2, cj_drugs: 1, cj_death: 0,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 2, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "medium", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "medium",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "medium",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "medium", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "medium", cj_sentencing: "medium", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "medium", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Kathy Hochul", url: "https://ballotpedia.org/Kathy_Hochul" },
+      { label: "NYS Focus — the NY governor's race", url: "https://nysfocus.com/2026/10/14/new-york-governors-race-hochul-blakeman" },
+      { label: "ABC7 NY — Hochul vs. Blakeman on crime & child care", url: "https://abc7ny.com/post/2026-ny-governor-race-hochul-blakeman-clash-crime-child-care/19956451/" },
+    ],
+    sourcingNote:
+      "Child care, gun-safety laws, defending Medicaid, abortion rights, and climate are from her record, which also has centrist moves (bail-reform rollback, migrant-influx caution). Governor's race, so federal items reflect general alignment and are lower confidence.",
+  },
+  {
+    id: "blakeman-ny-gov",
+    name: "Bruce Blakeman",
+    party: "Republican Party",
+    office: "Governor — New York",
+    state: "NY",
+    bio: "Republican nominee and Nassau County Executive, Trump-endorsed, running on crime and public safety, tax cuts, cooperation with federal immigration enforcement, and 'parental rights' (he restricted transgender athletes in county facilities).",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 0, ec_labor: -1,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -1,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -1, cl_carbon: -2, cl_tradeoff: -2,
+      // Justice — crime/public-safety focus, pro-police, anti-bail-reform
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -1,
+      so_abortion: -1, so_lgbtq: -2, so_religion: -1, so_voting: -1, so_dei: -2,
+      fp_military: -1, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -1,
+      ho_afford: -1, ho_zoning: -2, ho_renters: -2, ho_homeless: -1, ho_ownership: -1,
+    },
+    positionConfidence: {
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "medium", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "medium", cj_sentencing: "medium", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "medium", so_religion: "low", so_voting: "low", so_dei: "medium",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Bruce Blakeman", url: "https://ballotpedia.org/Bruce_Blakeman" },
+      { label: "NYS Focus — the NY governor's race", url: "https://nysfocus.com/2026/10/14/new-york-governors-race-hochul-blakeman" },
+      { label: "ABC7 NY — Hochul vs. Blakeman on crime & child care", url: "https://abc7ny.com/post/2026-ny-governor-race-hochul-blakeman-clash-crime-child-care/19956451/" },
+    ],
+    sourcingNote:
+      "Crime/public-safety emphasis, tax cuts, cooperation with ICE, and 'parental rights' (restricting transgender athletes) are from his record and campaign. Governor's race, so federal items reflect general conservative alignment and are lower confidence.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
