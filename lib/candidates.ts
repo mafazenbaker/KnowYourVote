@@ -1492,6 +1492,174 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "A Trump-aligned conservative and career-military national-security hawk; foreign-policy/defense and border positions fit that profile, but he left policy questionnaires unanswered, so most positions are inferred and low confidence. Verify before relying on this candidate's results.",
   },
+
+  // ----- South Carolina — 2026 U.S. Senate: Andrews (D) vs. Graham (R) -----
+  // Incumbent Lindsey Graham died in July 2026; his appointed successor
+  // Darline Graham is the Republican nominee.
+  {
+    id: "andrews-sc-sen",
+    name: "Annie Andrews",
+    party: "Democratic Party",
+    office: "U.S. Senate — South Carolina",
+    state: "SC",
+    bio: "Democratic nominee and pediatrician running on healthcare and gun safety: expand coverage and Medicaid, lower costs, protect abortion rights, and act on gun violence (a signature issue after treating injured children).",
+    accent: "#1C1847",
+    values: { v_govrole: 2, v_freedom: 2, v_environment: 1, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 2, hc_drugs: 2, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 2,
+      ec_taxes: 1, ec_wage: 2, ec_spending: 1, ec_trade: 1, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 2,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 2, cl_carbon: 1, cl_tradeoff: 1,
+      // Justice — gun-safety advocate (signature)
+      cj_police: 1, cj_sentencing: 1, cj_guns: 2, cj_drugs: 1, cj_death: 1,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Annie Andrews", url: "https://ballotpedia.org/Annie_Andrews" },
+      { label: "Post and Courier — who's challenging for the SC seat", url: "https://www.postandcourier.com/politics/who-running-us-senate-sc-against-graham/article_d0a446aa-4183-47aa-828c-bab0083dfbd7.html" },
+      { label: "NBC News — SC Senate debate", url: "https://www.nbcnews.com/politics/2026-election/south-carolina-senate-rivals-spar-iran-war-ai-trump-fiery-debate-rcna602590" },
+    ],
+    sourcingNote:
+      "Healthcare (she is a pediatrician), gun safety, and abortion rights are central to her campaign. Many down-ballot and foreign-policy items are inferred from her Democratic profile and are lower confidence.",
+  },
+  {
+    id: "graham-sc-sen",
+    name: "Darline Graham",
+    party: "Republican Party",
+    office: "U.S. Senate — South Carolina",
+    state: "SC",
+    bio: "Republican nominee appointed to the seat after Sen. Lindsey Graham's death in 2026, then winning the special primary runoff. A conservative aligned with the state GOP and President Trump; as a newly appointed figure her independent policy record is limited, so positions here are provisional.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -2, fp_aid: -1, fp_intervention: -2, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low", v_change: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — 2026 South Carolina U.S. Senate election", url: "https://ballotpedia.org/2026_United_States_Senate_election_in_South_Carolina" },
+      { label: "Al Jazeera — Trump boosts Graham in SC", url: "https://www.aljazeera.com/news/2026/10/21/trump-heads-to-south-carolina-to-boost-senator-darline-graham-in-race" },
+    ],
+    sourcingNote:
+      "A newly appointed Republican aligned with the state GOP and President Trump; a conservative profile is a reasonable baseline but her independent record is thin, so nearly all positions are inferred and low confidence. Verify before relying on this candidate's results.",
+  },
+
+  // ----- Massachusetts — 2026 U.S. Senate: Markey (D) vs. Deaton (R) -----
+  {
+    id: "markey-ma-sen",
+    name: "Ed Markey",
+    party: "Democratic Party",
+    office: "U.S. Senate — Massachusetts",
+    state: "MA",
+    bio: "Democratic incumbent and leading progressive, co-author of the Green New Deal. A climate champion who also backs Medicare for All, taxing the wealthy, strong labor and tenant protections, abortion rights, and an antiwar, pro-disarmament foreign policy.",
+    accent: "#1C1847",
+    values: { v_govrole: 2, v_freedom: 2, v_environment: 2, v_faith: -2, v_change: 2 },
+    positions: {
+      hc_coverage: 2, hc_drugs: 2, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 2,
+      ec_taxes: 2, ec_wage: 2, ec_spending: 2, ec_trade: 1, ec_labor: 2,
+      im_undocumented: 2, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 2,
+      ed_k12: 2, ed_debt: 2, ed_college: 2, ed_curriculum: 1, ed_prek: 2,
+      // Climate — Green New Deal co-author (signature)
+      cl_urgency: 2, cl_fossil: 2, cl_renew: 2, cl_carbon: 2, cl_tradeoff: 2,
+      cj_police: 2, cj_sentencing: 2, cj_guns: 2, cj_drugs: 2, cj_death: 2,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 2, so_voting: 2, so_dei: 2,
+      // Foreign — antiwar, nuclear-disarmament advocate
+      fp_military: 2, fp_aid: 1, fp_intervention: 2, fp_alliances: 1, fp_china: 1,
+      ho_afford: 2, ho_zoning: 1, ho_renters: 2, ho_homeless: 2, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "medium", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "medium",
+      ec_taxes: "medium", ec_wage: "medium", ec_spending: "medium", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "medium", im_border: "low", im_levels: "low", im_daca: "medium", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "medium", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_fossil: "medium", cl_carbon: "medium", cl_tradeoff: "medium",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "medium", so_dei: "medium",
+      fp_military: "medium", fp_aid: "low", fp_intervention: "medium", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "medium", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Ed Markey", url: "https://ballotpedia.org/Ed_Markey" },
+      { label: "Boston Globe — 2026 Massachusetts voter guide", url: "https://apps.bostonglobe.com/elections/massachusetts/voter-guide/" },
+      { label: "OnTheIssues — Ed Markey", url: "https://www.ontheissues.org/MA/Ed_Markey.htm" },
+    ],
+    sourcingNote:
+      "Climate (he co-authored the Green New Deal), Medicare for All, taxing the wealthy, labor, tenant protections, abortion rights, and disarmament/antiwar foreign policy are from his long, well-documented Senate record. A handful of down-ballot items are inferred and lower confidence.",
+  },
+  {
+    id: "deaton-ma-sen",
+    name: "John Deaton",
+    party: "Republican Party",
+    office: "U.S. Senate — Massachusetts",
+    state: "MA",
+    bio: "Republican nominee, an attorney and crypto-industry advocate (he previously challenged Elizabeth Warren) running as a moderate, libertarian-leaning Republican: lower taxes and lighter regulation, but notably moderate on abortion (opposes a national ban) in a deep-blue state.",
+    accent: "#EC2322",
+    values: { v_govrole: -1, v_freedom: -2, v_environment: -1, v_faith: 0, v_change: -1 },
+    positions: {
+      hc_coverage: -1, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -1, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -1, ec_spending: -2, ec_trade: -1, ec_labor: -1,
+      im_undocumented: -1, im_border: -1, im_levels: -1, im_daca: 0, im_asylum: -1,
+      ed_k12: -1, ed_debt: -2, ed_college: -1, ed_curriculum: -1, ed_prek: -1,
+      cl_urgency: -1, cl_fossil: -1, cl_renew: -1, cl_carbon: -1, cl_tradeoff: -1,
+      cj_police: -1, cj_sentencing: 0, cj_guns: -1, cj_drugs: 0, cj_death: -1,
+      // Social — moderate: opposes a national abortion ban
+      so_abortion: 1, so_lgbtq: 0, so_religion: 1, so_voting: -1, so_dei: -1,
+      fp_military: -1, fp_aid: -1, fp_intervention: -1, fp_alliances: 0, fp_china: -1,
+      ho_afford: -1, ho_zoning: -1, ho_renters: -2, ho_homeless: -1, ho_ownership: -1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_environment: "low", v_faith: "low", v_change: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — John Deaton", url: "https://ballotpedia.org/John_Deaton" },
+      { label: "Turn to 10 — Markey vs. Deaton debate", url: "https://turnto10.com/news/local/markey-takes-on-challenger-deaton-in-debate-for-us-senator-seat-in-massachusetts-oct-13-2026" },
+    ],
+    sourcingNote:
+      "Lower taxes, lighter regulation, a libertarian lean, and a moderate abortion stance (opposing a national ban) are from his 2024 and 2026 campaigns. Many positions are inferred from that moderate-Republican profile and are lower confidence.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
