@@ -3,11 +3,7 @@
 import { useMemo, useState } from "react";
 import type { Answers, Issue, Phase, Question } from "@/lib/types";
 import {
-  BACKGROUND_PHASE,
-  ECONOMIC_PHASE,
   STATE_PICK_PHASE,
-  STATE_PHASE,
-  VOTING_PHASE,
   VALUE_AXES,
   ISSUES,
   US_STATES,
@@ -55,17 +51,16 @@ export default function SurveyWizard({
     const priorityIssues = ISSUES.filter(
       (i) => (answers.priorities[i.id] ?? 0) >= PRIORITY_THRESHOLD,
     );
+    // Every step below actually affects the match: the state filters your
+    // ballot, and values + issue priorities drive the score. We intentionally
+    // don't ask for demographics (age, race, income, etc.) that wouldn't.
     return [
       { kind: "phase", phase: STATE_PICK_PHASE, label: "Your state" },
-      { kind: "phase", phase: BACKGROUND_PHASE, label: "About you" },
-      { kind: "phase", phase: ECONOMIC_PHASE, label: "Economics" },
       { kind: "values", label: "Your values" },
       { kind: "priorities", label: "Your priorities" },
       ...priorityIssues.map(
         (issue): Step => ({ kind: "issue", issue, label: issue.label }),
       ),
-      { kind: "phase", phase: STATE_PHASE, label: "Your area" },
-      { kind: "phase", phase: VOTING_PHASE, label: "Voting history" },
     ];
   }, [answers.priorities]);
 
