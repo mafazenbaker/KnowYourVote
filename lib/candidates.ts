@@ -1157,6 +1157,174 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "Education focus (school choice), pro-life, pro-2A, tax cuts, agriculture and border security are from her House record and campaign. Other positions are inferred from her Trump-aligned conservative profile and are lower confidence.",
   },
+
+  // ----- Alaska — 2026 U.S. Senate: Peltola (D) vs. Sullivan (R) -----
+  // Alaska uses ranked-choice; the general ballot also has two minor
+  // candidates (incl. a same-name "Dan J. Sullivan") not profiled here.
+  {
+    id: "peltola-ak-sen",
+    name: "Mary Peltola",
+    party: "Democratic Party",
+    office: "U.S. Senate — Alaska",
+    state: "AK",
+    bio: "Democratic nominee and former U.S. Representative, an Alaska Native (Yup'ik) moderate running on 'Fish, Family, Freedom' and affordability. Heterodox: pro-choice and pro-union, but notably gun-friendly and supportive of responsible Alaska oil, gas, and fisheries development.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 0, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 1, ec_spending: 1, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 1, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      // Climate — supports Alaska resource development (cross-cut for a Democrat)
+      cl_urgency: 0, cl_fossil: -1, cl_renew: 1, cl_carbon: 0, cl_tradeoff: 0,
+      // Justice — gun-friendly Alaskan
+      cj_police: 1, cj_sentencing: 1, cj_guns: -1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 2, so_lgbtq: 1, so_religion: 1, so_voting: 2, so_dei: 2,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "medium", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Mary Peltola", url: "https://ballotpedia.org/Mary_Peltola" },
+      { label: "Stateline/Yahoo — Peltola vs. Sullivan", url: "https://www.yahoo.com/news/politics/articles/alaskas-2026-senate-race-know-193147345.html" },
+      { label: "Alaska Public — 2026 Senate race", url: "https://alaskapublic.org/news/politics/elections/2026-08-18/u-s-senate-race-will-likely-have-two-dan-sullivans-and-a-mary-peltola" },
+    ],
+    sourcingNote:
+      "Abortion rights, labor, a gun-friendly stance, and support for Alaska resource development are from her House record and campaign brand. As a heterodox moderate many positions don't follow a party line, so several are inferred and lower confidence.",
+  },
+  {
+    id: "sullivan-ak-sen",
+    name: "Dan Sullivan",
+    party: "Republican Party",
+    office: "U.S. Senate — Alaska",
+    state: "AK",
+    bio: "Republican incumbent and Marine Corps veteran, a conservative and defense hawk: expand Alaska oil and gas, support the military, backed the 2025 Trump tax law, with a pro-life, pro–Second Amendment record.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -1,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      // Foreign — defense hawk (Senate Armed Services)
+      fp_military: -2, fp_aid: -1, fp_intervention: -2, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "medium", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "medium", fp_aid: "low", fp_intervention: "medium", fp_alliances: "low", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Dan Sullivan", url: "https://ballotpedia.org/Dan_Sullivan_(Alaska)" },
+      { label: "LiveNOW/Fox — Peltola vs. Sullivan", url: "https://www.livenowfox.com/news/alaskas-2026-senate-race-what-know-about-mary-peltola-vs-dan-sullivan" },
+      { label: "OnTheIssues — Dan Sullivan", url: "https://www.ontheissues.org/Dan_Sullivan.htm" },
+    ],
+    sourcingNote:
+      "Oil and gas development, military/defense, the 2025 tax law, and a pro-life, pro-2A record are from his Senate tenure and campaign. Most other positions are inferred from his conservative profile and are lower confidence.",
+  },
+
+  // ----- New Mexico — 2026 U.S. Senate: Luján (D) vs. Marker (R) -----
+  {
+    id: "lujan-nm-sen",
+    name: "Ben Ray Luján",
+    party: "Democratic Party",
+    office: "U.S. Senate — New Mexico",
+    state: "NM",
+    bio: "Democratic incumbent and former U.S. House assistant speaker, a mainstream progressive running on restoring stripped programs and lowering costs: expand healthcare and lower drug prices, climate and public-lands protection (he moved to ban uranium mining in the Chama watershed), broadband, and immigration reform.",
+    accent: "#1C1847",
+    values: { v_govrole: 2, v_freedom: 2, v_environment: 2, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 2, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 2, ec_wage: 2, ec_spending: 2, ec_trade: 1, ec_labor: 2,
+      im_undocumented: 2, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 2,
+      ed_k12: 2, ed_debt: 2, ed_college: 1, ed_curriculum: 1, ed_prek: 2,
+      cl_urgency: 2, cl_fossil: 1, cl_renew: 2, cl_carbon: 1, cl_tradeoff: 1,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 1,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 2,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 2, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "medium", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "medium", ec_spending: "medium", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "medium", im_border: "low", im_levels: "low", im_daca: "medium", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "medium", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "medium", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Ben Ray Luján", url: "https://ballotpedia.org/Ben_Ray_Luján" },
+      { label: "KUNM — Luján seeks reelection", url: "https://www.kunm.org/public-health-new-mexico/2026-10-19/election-2026-ben-ray-lujan-seeks-reelection-to-the-u-s-senate" },
+      { label: "Source NM — 2026 U.S. Senate", url: "https://sourcenm.com/2026/09/11/new-mexico-election-2026-us-senator/" },
+    ],
+    sourcingNote:
+      "Healthcare/drug pricing, climate and public-lands protection, taxes, labor and immigration reform are from his Senate record and campaign. Some criminal-justice, foreign-policy and housing items are inferred from his mainstream-Democratic record and are lower confidence.",
+  },
+  {
+    id: "marker-nm-sen",
+    name: "Larry Marker",
+    party: "Republican Party",
+    office: "U.S. Senate — New Mexico",
+    state: "NM",
+    bio: "Republican write-in nominee and former oil-and-gas operator challenging Sen. Luján in a strongly Democratic state (the state GOP did not field a ballot candidate). His policy record is limited; positions below reflect a conservative, energy-industry profile and are provisional.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -1 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 0, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      // Climate — former oil & gas operator
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -1, fp_aid: -2, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_faith: "low", v_change: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "medium", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "KRQE — Marker looks to unseat Luján", url: "https://www.krqe.com/news/politics-government/elections/republican-larry-marker-looks-to-unseat-ben-ray-lujan-in-u-s-senate-race/" },
+      { label: "Source NM — 2026 U.S. Senate", url: "https://sourcenm.com/2026/09/11/new-mexico-election-2026-us-senator/" },
+    ],
+    sourcingNote:
+      "A write-in challenger with a limited public record; his energy-industry background supports a conservative, pro-fossil-fuel profile, but nearly all positions here are inferred and low confidence. Replace with sourced positions from his campaign before relying on this candidate's results.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
