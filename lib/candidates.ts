@@ -992,6 +992,171 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "Tax cuts, deregulation, border security, and a pro-life, pro-2A, pro-coal record are from his House tenure and campaign. Other positions are inferred from his Trump-aligned conservative profile and are lower confidence.",
   },
+
+  // ----- Nebraska — 2026 U.S. Senate: Osborn (I) vs. Ricketts (R) -----
+  {
+    id: "osborn-ne-sen",
+    name: "Dan Osborn",
+    party: "Independent",
+    office: "U.S. Senate — Nebraska",
+    state: "NE",
+    bio: "Independent nominee, a former union leader (he led the 2021 Omaha Kellogg's strike) running an economic-populist, anti-corruption campaign. Heterodox: pro-labor, pro-abortion-rights and anti-war, but a gun owner who opposes an assault-weapons ban and backs border security. Vows to caucus with neither party.",
+    accent: "#AC8798",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 0, v_faith: -1, v_change: 2 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 2, hc_preexisting: 1, hc_medicaid: 1, hc_costs: 1,
+      // Economy — pro-worker; would not have passed the 2025 tax law
+      ec_taxes: 1, ec_wage: 2, ec_spending: 1, ec_trade: 1, ec_labor: 2,
+      // Immigration — to the right of Democrats: border security, but anti-wall
+      im_undocumented: -1, im_border: 0, im_levels: 0, im_daca: 1, im_asylum: 0,
+      ed_k12: 1, ed_debt: 1, ed_college: 1, ed_curriculum: 0, ed_prek: 1,
+      cl_urgency: 0, cl_fossil: 0, cl_renew: 1, cl_carbon: 0, cl_tradeoff: 0,
+      // Justice — gun owner; opposes an assault-weapons ban
+      cj_police: 0, cj_sentencing: 1, cj_guns: -1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 2, so_lgbtq: 1, so_religion: 1, so_voting: 1, so_dei: 0,
+      // Foreign — opposes the war in Iran
+      fp_military: 0, fp_aid: 0, fp_intervention: 2, fp_alliances: 0, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "medium", ec_spending: "low", ec_trade: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "medium", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Dan Osborn", url: "https://ballotpedia.org/Dan_Osborn" },
+      { label: "NBC News — Ricketts vs. Osborn debate", url: "https://www.nbcnews.com/politics/2026-election/gop-sen-pete-ricketts-independent-dan-osborn-clash-fiery-nebraska-sena-rcna595645" },
+      { label: "Reason — Can Osborn win over libertarians?", url: "https://reason.com/podcast/2026/10/05/can-nebraskas-dan-osborn-win-over-libertarians/" },
+    ],
+    sourcingNote:
+      "Labor (he led a union strike), abortion rights, opposition to an assault-weapons ban, opposition to the Iran war, and a border-security-but-anti-wall stance are documented. As a heterodox independent, many issues don't follow a party line, so numerous positions are inferred and lower confidence — verify before relying on them.",
+  },
+  {
+    id: "ricketts-ne-sen",
+    name: "Pete Ricketts",
+    party: "Republican Party",
+    office: "U.S. Senate — Nebraska",
+    state: "NE",
+    bio: "Republican incumbent and former two-term governor, a wealthy, staunch conservative: strongly pro-life, pro–Second Amendment, pro-business, favoring tax cuts, border security, and lighter regulation.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 2, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -2, fp_aid: -1, fp_intervention: -2, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "medium",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "medium", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Pete Ricketts", url: "https://ballotpedia.org/Pete_Ricketts" },
+      { label: "NBC News — Ricketts vs. Osborn debate", url: "https://www.nbcnews.com/politics/2026-election/gop-sen-pete-ricketts-independent-dan-osborn-clash-fiery-nebraska-sena-rcna595645" },
+      { label: "OnTheIssues — Pete Ricketts", url: "https://www.ontheissues.org/Pete_Ricketts.htm" },
+    ],
+    sourcingNote:
+      "A strongly pro-life, pro-2A, tax-cutting, business-first record is well established from his governorship and Senate tenure (he restored Nebraska's death penalty as governor). Most other positions are inferred from his conservative profile and are lower confidence.",
+  },
+
+  // ----- Louisiana — 2026 U.S. Senate: Davis (D) vs. Letlow (R) -----
+  {
+    id: "davis-la-sen",
+    name: "Jamie Davis",
+    party: "Democratic Party",
+    office: "U.S. Senate — Louisiana",
+    state: "LA",
+    bio: "Democratic nominee for the seat Bill Cassidy lost in the primary, running in a deeply Republican state. Public policy record is limited; the positions below reflect a mainstream Louisiana-Democratic profile and should be treated as provisional.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 1, ec_spending: 1, ec_trade: 1, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 0, cl_renew: 1, cl_carbon: 1, cl_tradeoff: 0,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 1, so_lgbtq: 1, so_religion: 1, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low", v_change: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — 2026 Louisiana U.S. Senate election", url: "https://ballotpedia.org/United_States_Senate_election_in_Louisiana,_2026" },
+    ],
+    sourcingNote:
+      "His individual policy record is thin in public reporting, so these positions are a provisional, inferred mainstream-Democratic profile and are ALL low confidence. Replace with sourced positions from his campaign before relying on this candidate's results.",
+  },
+  {
+    id: "letlow-la-sen",
+    name: "Julia Letlow",
+    party: "Republican Party",
+    office: "U.S. Senate — Louisiana",
+    state: "LA",
+    bio: "Republican nominee and U.S. Representative (LA-05), Trump-endorsed, who defeated incumbent Bill Cassidy's bid in the primary. A conservative with an education focus: pro-life, pro–Second Amendment, pro-agriculture, favoring tax cuts, school choice, and border security.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      // Education — her focus area: school choice, parental control
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -1,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -1, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "medium", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Julia Letlow", url: "https://ballotpedia.org/Julia_Letlow" },
+      { label: "Ballotpedia — 2026 Louisiana U.S. Senate election", url: "https://ballotpedia.org/United_States_Senate_election_in_Louisiana,_2026" },
+      { label: "OnTheIssues — Julia Letlow", url: "https://www.ontheissues.org/LA/Julia_Letlow.htm" },
+    ],
+    sourcingNote:
+      "Education focus (school choice), pro-life, pro-2A, tax cuts, agriculture and border security are from her House record and campaign. Other positions are inferred from her Trump-aligned conservative profile and are lower confidence.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
