@@ -1325,6 +1325,173 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "A write-in challenger with a limited public record; his energy-industry background supports a conservative, pro-fossil-fuel profile, but nearly all positions here are inferred and low confidence. Replace with sourced positions from his campaign before relying on this candidate's results.",
   },
+
+  // ----- Colorado — 2026 U.S. Senate: Hickenlooper (D) vs. Baisley (R) -----
+  {
+    id: "hickenlooper-co-sen",
+    name: "John Hickenlooper",
+    party: "Democratic Party",
+    office: "U.S. Senate — Colorado",
+    state: "CO",
+    bio: "Democratic incumbent and former governor/brewery owner, a pragmatic dealmaker running on lowering grocery and housing costs. Opposed Trump's tariffs and the GOP spending bill, and is a vocal critic of ICE enforcement tactics.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      // Economy — opposed Trump's tariffs (free-trade lean) and the GOP spending bill
+      ec_taxes: 1, ec_wage: 1, ec_spending: 1, ec_trade: -1, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 1, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 2, cl_carbon: 1, cl_tradeoff: 1,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 1,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "medium", ec_labor: "low",
+      im_undocumented: "medium", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "medium",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "medium", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — John Hickenlooper", url: "https://ballotpedia.org/John_Hickenlooper" },
+      { label: "Axios Denver — Hickenlooper vs. Baisley voter guide", url: "https://www.axios.com/local/denver/2026/10/17/hickenlooper-baisley-us-senate-colorado-voter-guide" },
+      { label: "CPR — Colorado U.S. Senate voter guide", url: "https://www.cpr.org/2026/09/24/vg-2026-colorado-us-senate-voter-guide/" },
+    ],
+    sourcingNote:
+      "Opposition to Trump's tariffs and the GOP spending bill, criticism of ICE tactics, and healthcare/abortion positions are from his record and campaign. As a pragmatic moderate several items are inferred and lower confidence.",
+  },
+  {
+    id: "baisley-co-sen",
+    name: "Mark Baisley",
+    party: "Republican Party",
+    office: "U.S. Senate — Colorado",
+    state: "CO",
+    bio: "Republican nominee and state senator campaigning for 'small and frugal government': fiscal restraint, government accountability, support for Trump's tariffs and the GOP spending bill, and an immigration approach that deports dangerous immigrants while letting vetted legal immigrants stay.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      // Economy — frugal government; supports Trump's tariffs
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 2, ec_labor: -2,
+      // Immigration — deport dangerous, but allow vetted legal immigrants
+      im_undocumented: -1, im_border: -2, im_levels: -1, im_daca: -1, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -1, fp_aid: -2, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "medium", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Mark Baisley", url: "https://ballotpedia.org/Mark_Baisley" },
+      { label: "Colorado Politics — Baisley vs. Hickenlooper", url: "https://www.coloradopolitics.com/2026/10/02/mark-baisley-john-hickenlooper-us-senate/" },
+      { label: "Axios Denver — voter guide", url: "https://www.axios.com/local/denver/2026/10/17/hickenlooper-baisley-us-senate-colorado-voter-guide" },
+    ],
+    sourcingNote:
+      "Frugal-government fiscal stance, support for Trump's tariffs and the GOP spending bill, and his nuanced immigration position are from campaign coverage. Most other positions are inferred from his conservative profile and are lower confidence.",
+  },
+
+  // ----- Virginia — 2026 U.S. Senate: Warner (D) vs. Mizusawa (R) -----
+  {
+    id: "warner-va-sen",
+    name: "Mark Warner",
+    party: "Democratic Party",
+    office: "U.S. Senate — Virginia",
+    state: "VA",
+    bio: "Democratic incumbent and former governor/tech entrepreneur, a centrist dealmaker and Intelligence Committee leader seeking a final term: focused on healthcare and reining in AI, fiscally moderate, pro-choice, and a noted national-security and China hawk.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 1, ec_spending: 1, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 1, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 1, cl_carbon: 1, cl_tradeoff: 1,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 1,
+      // Foreign — Intelligence Committee; a China/national-security hawk (cross-cut)
+      fp_military: 0, fp_aid: 1, fp_intervention: 0, fp_alliances: 1, fp_china: -1,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "medium", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Mark Warner", url: "https://ballotpedia.org/Mark_Warner" },
+      { label: "Virginia Mercury — Warner seeks a final term", url: "https://virginiamercury.com/2026/10/14/warner-seeks-a-final-term-as-mizusawa-makes-his-case-for-change/" },
+      { label: "OnTheIssues — Mark Warner", url: "https://www.ontheissues.org/Mark_Warner.htm" },
+    ],
+    sourcingNote:
+      "Healthcare, AI regulation, fiscal moderation, abortion rights, and a China/national-security-hawk posture are from his Senate record. Many down-ballot items are inferred from his centrist-Democratic record and are lower confidence.",
+  },
+  {
+    id: "mizusawa-va-sen",
+    name: "Bert Mizusawa",
+    party: "Republican Party",
+    office: "U.S. Senate — Virginia",
+    state: "VA",
+    bio: "Republican nominee and retired Army Major General (and former CIA senior advisor), running as a Trump-aligned conservative and national-security hawk. His detailed policy record is limited, so the positions below are provisional.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      // Foreign — career military; a defense hawk
+      fp_military: -2, fp_aid: -1, fp_intervention: -2, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "medium", fp_aid: "low", fp_intervention: "medium", fp_alliances: "low", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Bert Mizusawa", url: "https://ballotpedia.org/Bert_Mizusawa" },
+      { label: "Virginia Mercury — Warner vs. Mizusawa", url: "https://virginiamercury.com/2026/10/14/warner-seeks-a-final-term-as-mizusawa-makes-his-case-for-change/" },
+    ],
+    sourcingNote:
+      "A Trump-aligned conservative and career-military national-security hawk; foreign-policy/defense and border positions fit that profile, but he left policy questionnaires unanswered, so most positions are inferred and low confidence. Verify before relying on this candidate's results.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
