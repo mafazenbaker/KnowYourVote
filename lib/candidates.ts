@@ -2157,6 +2157,172 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "Hardline border security, deep tax/spending cuts, a pro-life, pro-2A record, and election-integrity restrictions are from his well-documented Freedom Caucus House record. Governor's race, so a few federal items reflect general alignment and are lower confidence.",
   },
+
+  // ===== Florida — a dual-race state (Senate special + Governor) =====
+  // ----- Florida — 2026 U.S. Senate (special, Rubio seat): Nixon (D) vs. Moody (R) -----
+  {
+    id: "nixon-fl-sen",
+    name: "Angie Nixon",
+    party: "Democratic Party",
+    office: "U.S. Senate — Florida",
+    state: "FL",
+    bio: "Democratic nominee for the Senate special election and a progressive state representative from Jacksonville: a tenant-rights and racial-justice organizer who champions expanding healthcare and Medicaid, climate action, a higher minimum wage, and abortion rights.",
+    accent: "#1C1847",
+    values: { v_govrole: 2, v_freedom: 2, v_environment: 2, v_faith: -1, v_change: 2 },
+    positions: {
+      hc_coverage: 2, hc_drugs: 2, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 2,
+      ec_taxes: 2, ec_wage: 2, ec_spending: 2, ec_trade: 1, ec_labor: 2,
+      im_undocumented: 2, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 2,
+      ed_k12: 2, ed_debt: 2, ed_college: 1, ed_curriculum: 1, ed_prek: 2,
+      cl_urgency: 2, cl_fossil: 2, cl_renew: 2, cl_carbon: 2, cl_tradeoff: 2,
+      cj_police: 2, cj_sentencing: 2, cj_guns: 2, cj_drugs: 2, cj_death: 1,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 2,
+      fp_military: 1, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      // Housing — tenant-rights focus (signature)
+      ho_afford: 2, ho_zoning: 1, ho_renters: 2, ho_homeless: 2, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "medium", ec_spending: "low", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "medium", im_border: "low", im_levels: "low", im_daca: "medium", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "medium", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "medium", so_dei: "medium",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "medium", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Angie Nixon", url: "https://ballotpedia.org/Angie_Nixon" },
+      { label: "Wikipedia — 2026 Florida U.S. Senate special election", url: "https://en.wikipedia.org/wiki/2026_United_States_Senate_special_election_in_Florida" },
+    ],
+    sourcingNote:
+      "Tenant rights, racial justice, healthcare/Medicaid, climate, a higher minimum wage, and abortion rights are from her legislative record and activism. Several down-ballot and foreign-policy items are inferred from her progressive profile and are lower confidence.",
+  },
+  {
+    id: "moody-fl-sen",
+    name: "Ashley Moody",
+    party: "Republican Party",
+    office: "U.S. Senate — Florida",
+    state: "FL",
+    bio: "Republican appointed incumbent (to the seat Marco Rubio left) and former Florida Attorney General, a Trump-aligned conservative: tough-on-crime and hardline on immigration (she repeatedly sued the Biden administration over the border), pro-life, pro–Second Amendment, and for tax cuts.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      // Immigration — hardline (she sued the Biden administration as AG)
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -2, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "medium",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "medium", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "medium", cj_guns: "medium", cj_drugs: "low", cj_death: "medium",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "medium", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Ashley B. Moody", url: "https://ballotpedia.org/Ashley_B._Moody" },
+      { label: "Wikipedia — 2026 Florida U.S. Senate special election", url: "https://en.wikipedia.org/wiki/2026_United_States_Senate_special_election_in_Florida" },
+    ],
+    sourcingNote:
+      "Tough-on-crime, hardline immigration (she sued over the border as AG), election-integrity, pro-life and pro-2A positions are from her record as Attorney General. Most other positions are inferred from her Trump-aligned conservative profile and are lower confidence.",
+  },
+
+  // ----- Florida — 2026 Governor: Jolly (D) vs. Donalds (R) -----
+  // Governor's race: federal-issue mappings reflect general alignment.
+  {
+    id: "jolly-fl-gov",
+    name: "David Jolly",
+    party: "Democratic Party",
+    office: "Governor — Florida",
+    state: "FL",
+    bio: "Democratic nominee for the open governorship, a former Republican congressman who became a Democrat in 2025. A centrist running on Florida's property-insurance and affordability crisis, housing, public schools, expanding healthcare, and abortion rights.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 1, ec_spending: 1, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 2, cl_carbon: 1, cl_tradeoff: 1,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      // Housing / insurance (signature issue)
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "medium",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "medium", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "medium", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "medium",
+    },
+    sources: [
+      { label: "Ballotpedia — David Jolly", url: "https://ballotpedia.org/David_Jolly" },
+      { label: "WLRN — Jolly wins Democratic nomination", url: "https://www.wlrn.org/government-politics/2026-08-18/david-jolly-governors-race-florida" },
+      { label: "WTSP — Donalds vs. Jolly guide", url: "https://www.wtsp.com/article/news/politics/elections/voting/florida-governor-candidates-2026-david-jolly-byron-donalds/67-c24c3ca8-78ef-4738-9201-784da31430db" },
+    ],
+    sourcingNote:
+      "Property-insurance/affordability, housing, public schools, healthcare and abortion rights are from his campaign; he moved from Republican to Democrat in 2025, so some positions evolved. Governor's race, so federal items reflect general Democratic alignment and are lower confidence.",
+  },
+  {
+    id: "donalds-fl-gov",
+    name: "Byron Donalds",
+    party: "Republican Party",
+    office: "Governor — Florida",
+    state: "FL",
+    bio: "Republican nominee and U.S. Representative, Trump-endorsed for the open governorship: a staunch conservative and school-choice champion with a pro-life, pro–Second Amendment, low-tax, hardline-immigration record.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 2, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      // Education — school-choice champion (signature)
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -1, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "medium", ed_debt: "low", ed_college: "low", ed_curriculum: "medium", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "medium", so_voting: "low", so_dei: "medium",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Byron Donalds", url: "https://ballotpedia.org/Byron_Donalds" },
+      { label: "PBS NewsHour — Donalds vs. Jolly", url: "https://www.pbs.org/newshour/politics/gop-rep-donalds-will-run-against-democrat-jolly-in-floridas-race-for-governor" },
+      { label: "WTSP — Donalds vs. Jolly guide", url: "https://www.wtsp.com/article/news/politics/elections/voting/florida-governor-candidates-2026-david-jolly-byron-donalds/67-c24c3ca8-78ef-4738-9201-784da31430db" },
+    ],
+    sourcingNote:
+      "School choice, a pro-life, pro-2A, low-tax, hardline-immigration record are from his well-documented conservative House tenure. Governor's race, so some federal items reflect general alignment and are lower confidence.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

@@ -18,6 +18,18 @@ function matchColor(pct: number) {
   return "#AC8798";
 }
 
+// The office field looks like "U.S. Senate — Maine" or "Governor — California".
+// The part before the em dash is the race/contest a candidate is competing in.
+function raceLabel(office: string): string {
+  return office.split("—")[0].trim();
+}
+function raceOrder(label: string): number {
+  if (label.startsWith("U.S. Senate")) return 0;
+  if (label.startsWith("Governor")) return 1;
+  if (label.startsWith("U.S. House")) return 2;
+  return 3;
+}
+
 export default function Results({
   answers,
   onRestart,
@@ -41,10 +53,33 @@ export default function Results({
   const pool = previewAll || !hasStateCandidates ? CANDIDATES : inState;
   const showingFiltered = hasStateCandidates && !previewAll;
 
+  // Flat ranking across the whole pool — used by the chat assistant.
   const results = useMemo(
     () => rankCandidates(answers, pool),
     [answers, pool],
   );
+
+  // Group the pool by race (U.S. Senate, Governor, …) and rank within each,
+  // so a state with multiple 2026 contests shows one ranked list per contest.
+  const raceGroups = useMemo(() => {
+    const byRace = new Map<string, typeof pool>();
+    for (const c of pool) {
+      const label = raceLabel(c.office);
+      const list = byRace.get(label);
+      if (list) list.push(c);
+      else byRace.set(label, [c]);
+    }
+    return [...byRace.entries()]
+      .map(([label, cands]) => ({
+        label,
+        results: rankCandidates(answers, cands),
+      }))
+      .sort(
+        (a, b) =>
+          raceOrder(a.label) - raceOrder(b.label) ||
+          a.label.localeCompare(b.label),
+      );
+  }, [answers, pool]);
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-8">
@@ -129,10 +164,21 @@ export default function Results({
         </div>
       )}
 
-      {/* Candidate cards */}
-      <div className="mt-6 space-y-4">
-        {results.map((r, idx) => (
-          <CandidateCard key={r.candidate.id} result={r} rank={idx + 1} />
+      {/* Candidate cards, grouped by race (one ranked list per contest) */}
+      <div className="mt-6 space-y-8">
+        {raceGroups.map((g) => (
+          <section key={g.label}>
+            {raceGroups.length > 1 && (
+              <h2 className="mb-3 font-display text-lg font-bold text-brand-navy">
+                {g.label}
+              </h2>
+            )}
+            <div className="space-y-4">
+              {g.results.map((r, idx) => (
+                <CandidateCard key={r.candidate.id} result={r} rank={idx + 1} />
+              ))}
+            </div>
+          </section>
         ))}
       </div>
 
