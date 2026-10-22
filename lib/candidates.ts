@@ -2652,6 +2652,173 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "Natural-resource/lower-tax conservatism, a pro-life, pro-2A, strong-border record come from his House tenure. Governor's race, so a few federal items reflect general alignment and are lower confidence.",
   },
+
+  // ----- West Virginia — 2026 U.S. Senate: Fetty Anderson (D) vs. Capito (R) -----
+  {
+    id: "fettyanderson-wv-sen",
+    name: "Rachel Fetty Anderson",
+    party: "Democratic Party",
+    office: "U.S. Senate — West Virginia",
+    state: "WV",
+    bio: "Democratic nominee and former Morgantown deputy mayor challenging a long-serving incumbent in a deep-red state. She runs on a populist, anti-corporate message (she says Capito votes for donors and corporate interests). Her detailed policy record is limited, so positions here are provisional.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 2, ec_spending: 1, ec_trade: 1, ec_labor: 2,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 0, cl_renew: 1, cl_carbon: 1, cl_tradeoff: 0,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 2, so_lgbtq: 1, so_religion: 1, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low", v_change: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "medium", ec_spending: "low", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "West Virginia Watch — Capito will face Fetty Anderson", url: "https://westvirginiawatch.com/2026/05/12/capito-easily-secures-gop-nomination-for-u-s-senate-seat-tuesday-shortly-after-polls-close-in-wv/" },
+      { label: "WVVA — Capito, Fetty Anderson on the issues", url: "https://www.wvva.com/2026/10/21/capito-fetty-anderson-speak-iran-tax-cuts-more-ahead-senate-election/" },
+    ],
+    sourcingNote:
+      "Her anti-corporate, pro-worker message is documented, but her individual policy record is thin, so these are a provisional moderate-Democratic profile and mostly low confidence. Replace with sourced positions before relying on this candidate's results.",
+  },
+  {
+    id: "capito-wv-sen",
+    name: "Shelley Moore Capito",
+    party: "Republican Party",
+    office: "U.S. Senate — West Virginia",
+    state: "WV",
+    bio: "Republican incumbent, a conservative with an institutionalist streak: a champion of coal and energy and a reliable vote for tax cuts and gun rights, but more protective of Medicaid than many in her party, and a backer of bipartisan infrastructure, the 2022 gun-safety law, and NATO/Ukraine.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      // Healthcare — more Medicaid-protective than most Republicans (cross-cut)
+      hc_coverage: -1, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -1, hc_costs: -2,
+      // Economy — tax cuts, but backed bipartisan infrastructure
+      ec_taxes: -2, ec_wage: -2, ec_spending: -1, ec_trade: 1, ec_labor: -1,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      // Climate — a coal champion
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -1, cl_carbon: -2, cl_tradeoff: -2,
+      // Justice — voted for the 2022 Bipartisan Safer Communities Act (cross-cut)
+      cj_police: -2, cj_sentencing: -1, cj_guns: -1, cj_drugs: -1, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -1, so_religion: -1, so_voting: -1, so_dei: -2,
+      // Foreign — an internationalist who backs NATO and Ukraine
+      fp_military: -2, fp_aid: -1, fp_intervention: -1, fp_alliances: 1, fp_china: -2,
+      ho_afford: -1, ho_zoning: -2, ho_renters: -2, ho_homeless: -1, ho_ownership: -1,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "high", cl_renew: "low", cl_carbon: "medium", cl_tradeoff: "medium",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "medium", fp_aid: "low", fp_intervention: "low", fp_alliances: "medium", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Shelley Moore Capito", url: "https://ballotpedia.org/Shelley_Moore_Capito" },
+      { label: "WV MetroNews — Capito wins GOP nomination", url: "https://wvmetronews.com/2026/05/12/republican-race-for-u-s-senate-is-called-for-incumbent-capito/" },
+      { label: "OnTheIssues — Shelley Moore Capito", url: "https://www.ontheissues.org/Shelley_Moore_Capito.htm" },
+    ],
+    sourcingNote:
+      "Coal/energy, tax cuts, and a pro-life record are well established; her Medicaid protectiveness, infrastructure and 2022 gun-law votes, and NATO/Ukraine support are documented cross-cuts from her Senate record. Some down-ballot items are inferred and lower confidence.",
+  },
+
+  // ----- Delaware — 2026 U.S. Senate: Coons (D) vs. Katz (R) -----
+  {
+    id: "coons-de-sen",
+    name: "Chris Coons",
+    party: "Democratic Party",
+    office: "U.S. Senate — Delaware",
+    state: "DE",
+    bio: "Democratic incumbent and senior Foreign Relations Committee member, a center-left, faith-oriented dealmaker: strong on climate, abortion rights, and healthcare, and a notable champion of foreign aid, development, and U.S. alliances.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 2, v_faith: 0, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 1, ec_spending: 1, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 1, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 2, cl_fossil: 1, cl_renew: 2, cl_carbon: 2, cl_tradeoff: 1,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 2, so_lgbtq: 2, so_religion: 1, so_voting: 2, so_dei: 1,
+      // Foreign — a leading champion of foreign aid and alliances (cross-cut emphasis)
+      fp_military: 0, fp_aid: 2, fp_intervention: 1, fp_alliances: 2, fp_china: -1,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "medium",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "medium", cl_carbon: "medium", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "low", so_voting: "medium", so_dei: "low",
+      fp_military: "low", fp_aid: "high", fp_intervention: "low", fp_alliances: "high", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Chris Coons", url: "https://ballotpedia.org/Chris_Coons" },
+      { label: "WHYY — Delaware Senate voter guide", url: "https://whyy.org/articles/election-2026-delaware-senate-voter-guide/" },
+      { label: "OnTheIssues — Chris Coons", url: "https://www.ontheissues.org/Chris_Coons.htm" },
+    ],
+    sourcingNote:
+      "Climate, abortion rights, healthcare, and his signature championing of foreign aid and alliances are from his well-documented Senate record. Several down-ballot items are inferred from his center-left record and are lower confidence.",
+  },
+  {
+    id: "katz-de-sen",
+    name: "Mike Katz",
+    party: "Republican Party",
+    office: "U.S. Senate — Delaware",
+    state: "DE",
+    bio: "Republican nominee, a physician and former state senator (he previously served as a Democrat), challenging a long-serving incumbent in a strongly Democratic state. His record as a Republican is limited, so positions here are provisional.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -1 },
+    positions: {
+      hc_coverage: -1, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -1, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -1, ec_spending: -2, ec_trade: 0, ec_labor: -1,
+      im_undocumented: -2, im_border: -2, im_levels: -1, im_daca: -1, im_asylum: -2,
+      ed_k12: -1, ed_debt: -2, ed_college: -1, ed_curriculum: -1, ed_prek: -1,
+      cl_urgency: -2, cl_fossil: -1, cl_renew: -1, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -1, cj_sentencing: -1, cj_guns: -2, cj_drugs: -1, cj_death: -1,
+      so_abortion: -1, so_lgbtq: -1, so_religion: -1, so_voting: -1, so_dei: -1,
+      fp_military: -1, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -1, ho_zoning: -1, ho_renters: -2, ho_homeless: -1, ho_ownership: -1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low", v_change: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "WHYY — Coons vs. Katz voter guide", url: "https://whyy.org/articles/election-2026-delaware-senate-voter-guide/" },
+      { label: "Fox29 — Delaware Senate preview", url: "https://www.fox29.com/news/election-2026-delaware-senate-chris-coons-michael-katz-bios" },
+    ],
+    sourcingNote:
+      "A physician and former state senator who became a Republican; his record as a Republican is thin, so these positions are a provisional conservative profile and nearly all low confidence. His medical background may make his healthcare views more nuanced than mapped — verify before relying on this candidate's results.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
