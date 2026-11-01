@@ -2986,6 +2986,173 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "Hardline immigration (including cutting legal immigration), a hawkish defense/China posture, pro-life, pro-2A, tough-on-crime and tax-cut positions are from his well-documented Senate record. A few down-ballot items are inferred and lower confidence.",
   },
+
+  // ----- Mississippi — 2026 U.S. Senate: Colom (D) vs. Hyde-Smith (R) -----
+  {
+    id: "colom-ms-sen",
+    name: "Scott Colom",
+    party: "Democratic Party",
+    office: "U.S. Senate — Mississippi",
+    state: "MS",
+    bio: "Democratic nominee and a reform-minded district attorney, running on expanding Medicaid and healthcare access, criminal-justice reform, economic opportunity, and abortion rights in a deep-red state.",
+    accent: "#1C1847",
+    values: { v_govrole: 2, v_freedom: 2, v_environment: 1, v_faith: -1, v_change: 2 },
+    positions: {
+      // Healthcare — Medicaid expansion is a central theme (MS hasn't expanded)
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 2, ec_spending: 1, ec_trade: 1, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 1, cl_carbon: 1, cl_tradeoff: 1,
+      // Justice — a reform-minded prosecutor (signature)
+      cj_police: 1, cj_sentencing: 2, cj_guns: 1, cj_drugs: 2, cj_death: 1,
+      so_abortion: 2, so_lgbtq: 1, so_religion: 1, so_voting: 2, so_dei: 2,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "low",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "medium", cj_sentencing: "medium", cj_guns: "low", cj_drugs: "medium", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "medium",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Scott Colom", url: "https://ballotpedia.org/Scott_Colom" },
+      { label: "NBC News — Democrats jump into Mississippi Senate race", url: "https://www.nbcnews.com/politics/2026-election/democrats-jump-mississippi-sente-race-rcna604614" },
+      { label: "Mississippi Independent — the tightening race", url: "https://msindy.org/p/hyde-smith-dismisses-ms-senate-race-poll-tightening" },
+    ],
+    sourcingNote:
+      "Medicaid expansion, criminal-justice reform (he is a reform-minded DA), and abortion rights are central to his campaign. His federal record is nil, so most other positions are inferred and lower confidence.",
+  },
+  {
+    id: "hydesmith-ms-sen",
+    name: "Cindy Hyde-Smith",
+    party: "Republican Party",
+    office: "U.S. Senate — Mississippi",
+    state: "MS",
+    bio: "Republican incumbent, Trump-endorsed, a conservative focused on agriculture, tax cuts, and lighter regulation, with a pro-life, pro–Second Amendment, strong-border record.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -2, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "medium", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "medium", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Cindy Hyde-Smith", url: "https://ballotpedia.org/Cindy_Hyde-Smith" },
+      { label: "OnTheIssues — Cindy Hyde-Smith", url: "https://www.ontheissues.org/Cindy_Hyde-Smith.htm" },
+    ],
+    sourcingNote:
+      "Agriculture, tax cuts, and a pro-life, pro-2A, strong-border record are from her Senate tenure. Most other positions are inferred from her conservative profile and are lower confidence.",
+  },
+
+  // ----- Idaho — 2026 U.S. Senate: Achilles (I) vs. Risch (R) -----
+  // The Democratic nominee withdrew; independent Todd Achilles is the main
+  // challenger.
+  {
+    id: "achilles-id-sen",
+    name: "Todd Achilles",
+    party: "Independent",
+    office: "U.S. Senate — Idaho",
+    state: "ID",
+    bio: "Independent nominee and former state representative, an Army veteran (West Point) and tech businessman running as a pragmatic, non-partisan alternative focused on affordability, protecting public lands, and refusing to answer to either party.",
+    accent: "#AC8798",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 2 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 1, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 1, ec_spending: 0, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 0, im_border: 0, im_levels: 0, im_daca: 1, im_asylum: 0,
+      ed_k12: 1, ed_debt: 1, ed_college: 1, ed_curriculum: 0, ed_prek: 1,
+      // Climate — public-lands protection
+      cl_urgency: 1, cl_fossil: 0, cl_renew: 1, cl_carbon: 0, cl_tradeoff: 1,
+      cj_police: 0, cj_sentencing: 1, cj_guns: -1, cj_drugs: 1, cj_death: 0,
+      so_abortion: 1, so_lgbtq: 1, so_religion: 1, so_voting: 1, so_dei: 0,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: -1,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "low", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "medium", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Todd Achilles", url: "https://ballotpedia.org/Todd_Achilles" },
+      { label: "Idaho Capital Sun — where Risch and Achilles stand", url: "https://idahocapitalsun.com/2026/08/05/risch-v-achilles-may-be-idahos-most-competitive-us-senate-race-in-years-heres-where-they-stand/" },
+      { label: "The Fulcrum — independent Achilles vs. Risch", url: "https://thefulcrum.us/elections/idaho-senate-race-independent-todd-achilles-vs-jim-risch" },
+    ],
+    sourcingNote:
+      "Affordability, public-lands protection, and a deliberately non-partisan posture are documented; as an independent his positions don't follow a party line and his federal record is nil, so most are inferred and low confidence.",
+  },
+  {
+    id: "risch-id-sen",
+    name: "Jim Risch",
+    party: "Republican Party",
+    office: "U.S. Senate — Idaho",
+    state: "ID",
+    bio: "Republican incumbent and Senate Foreign Relations Committee leader, a staunch conservative and defense/China hawk: for transferring federal lands and resource development, tax cuts, and a pro-life, pro–Second Amendment record.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      // Foreign — Foreign Relations leader; defense and China hawk
+      fp_military: -2, fp_aid: -1, fp_intervention: -2, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "medium", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "medium", fp_aid: "low", fp_intervention: "medium", fp_alliances: "low", fp_china: "high",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Jim Risch", url: "https://ballotpedia.org/Jim_Risch" },
+      { label: "OnTheIssues — Jim Risch", url: "https://www.ontheissues.org/Jim_Risch.htm" },
+      { label: "Idaho Capital Sun — where Risch and Achilles stand", url: "https://idahocapitalsun.com/2026/08/05/risch-v-achilles-may-be-idahos-most-competitive-us-senate-race-in-years-heres-where-they-stand/" },
+    ],
+    sourcingNote:
+      "Federal-lands transfer/resource development, a defense and China-hawk foreign policy (he leads Foreign Relations), tax cuts, and a pro-life, pro-2A record are from his Senate tenure. A few down-ballot items are inferred and lower confidence.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
