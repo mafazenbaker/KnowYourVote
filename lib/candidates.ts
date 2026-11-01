@@ -2819,6 +2819,173 @@ export const CANDIDATES: Candidate[] = [
     sourcingNote:
       "A physician and former state senator who became a Republican; his record as a Republican is thin, so these positions are a provisional conservative profile and nearly all low confidence. His medical background may make his healthcare views more nuanced than mapped — verify before relying on this candidate's results.",
   },
+
+  // ----- Kansas — 2026 U.S. Senate: Hamilton (D) vs. Marshall (R) -----
+  {
+    id: "hamilton-ks-sen",
+    name: "Adam Hamilton",
+    party: "Democratic Party",
+    office: "U.S. Senate — Kansas",
+    state: "KS",
+    bio: "Democratic nominee, a prominent Methodist pastor from Leawood, running as a faith-grounded moderate: expand healthcare and Medicaid, lower costs, and restore civility — more centrist than many Democrats on social questions.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: 1, v_change: 1 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 1,
+      ec_taxes: 1, ec_wage: 1, ec_spending: 1, ec_trade: 0, ec_labor: 1,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 2, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 1, cl_renew: 2, cl_carbon: 1, cl_tradeoff: 1,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 1, cj_drugs: 1, cj_death: 0,
+      // Social — a moderate, faith-grounded Democrat
+      so_abortion: 1, so_lgbtq: 1, so_religion: 0, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_faith: "medium",
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "medium", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "low", ec_spending: "low", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "medium", so_religion: "medium", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Johnson County Post — meet the Senate candidates", url: "https://johnsoncountypost.com/2026/10/23/kansas-u-s-senate-election-meet-the-candidates-299959/" },
+      { label: "Washington Post — Kansas Senate debate takeaways", url: "https://www.washingtonpost.com/politics/2026/10/21/takeaways-senate-debate-kansas-an-unexpected-midterm-battleground/" },
+    ],
+    sourcingNote:
+      "Healthcare/Medicaid expansion, lowering costs, and a faith-grounded, moderate tone are from his campaign; he is more centrist than many Democrats on social issues. His federal record is nil (first run), so most positions are inferred and lower confidence.",
+  },
+  {
+    id: "marshall-ks-sen",
+    name: "Roger Marshall",
+    party: "Republican Party",
+    office: "U.S. Senate — Kansas",
+    state: "KS",
+    bio: "Republican incumbent and a physician (OB-GYN), a staunch conservative: a leading pro-life voice, strongly pro–Second Amendment, hardline on immigration, for tax cuts and Kansas agriculture, and opposed to the ACA.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 2, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      // Social — a leading pro-life voice (as an OB-GYN)
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      fp_military: -2, fp_aid: -1, fp_intervention: -1, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "medium", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "medium", im_border: "medium", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "medium", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "low", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "high", so_lgbtq: "low", so_religion: "medium", so_voting: "low", so_dei: "low",
+      fp_military: "medium", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "medium",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Roger Marshall", url: "https://ballotpedia.org/Roger_Marshall" },
+      { label: "OnTheIssues — Roger Marshall", url: "https://www.ontheissues.org/Roger_Marshall.htm" },
+      { label: "Washington Post — Kansas Senate debate takeaways", url: "https://www.washingtonpost.com/politics/2026/10/21/takeaways-senate-debate-kansas-an-unexpected-midterm-battleground/" },
+    ],
+    sourcingNote:
+      "A leading pro-life record (as an OB-GYN), pro-2A, hardline immigration, tax cuts, agriculture, and ACA opposition are from his Senate tenure. Most other positions are inferred from his conservative profile and are lower confidence.",
+  },
+
+  // ----- Arkansas — 2026 U.S. Senate: Shoffner (D) vs. Cotton (R) -----
+  {
+    id: "shoffner-ar-sen",
+    name: "Hallie Shoffner",
+    party: "Democratic Party",
+    office: "U.S. Senate — Arkansas",
+    state: "AR",
+    bio: "Democratic nominee, a sixth-generation Arkansas farmer and agribusiness CEO running as a rural economic populist: restoring economic stability for working families, with pro-worker, anti-corporate priorities and a more moderate profile on social and cultural issues.",
+    accent: "#1C1847",
+    values: { v_govrole: 1, v_freedom: 1, v_environment: 1, v_faith: -1, v_change: 2 },
+    positions: {
+      hc_coverage: 1, hc_drugs: 1, hc_preexisting: 2, hc_medicaid: 2, hc_costs: 2,
+      // Economy — "economic stability for working families" (signature)
+      ec_taxes: 1, ec_wage: 2, ec_spending: 1, ec_trade: 1, ec_labor: 2,
+      im_undocumented: 1, im_border: 1, im_levels: 1, im_daca: 1, im_asylum: 1,
+      ed_k12: 2, ed_debt: 1, ed_college: 1, ed_curriculum: 1, ed_prek: 1,
+      cl_urgency: 1, cl_fossil: 0, cl_renew: 1, cl_carbon: 0, cl_tradeoff: 0,
+      cj_police: 1, cj_sentencing: 1, cj_guns: 0, cj_drugs: 1, cj_death: 0,
+      // Social — moderate for a rural-populist Democrat
+      so_abortion: 1, so_lgbtq: 1, so_religion: 0, so_voting: 2, so_dei: 1,
+      fp_military: 0, fp_aid: 1, fp_intervention: 1, fp_alliances: 1, fp_china: 0,
+      ho_afford: 1, ho_zoning: 1, ho_renters: 1, ho_homeless: 1, ho_ownership: 1,
+    },
+    positionConfidence: {
+      v_govrole: "low", v_freedom: "low", v_environment: "low", v_faith: "low",
+      hc_coverage: "low", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "low", ec_wage: "medium", ec_spending: "low", ec_trade: "low", ec_labor: "medium",
+      im_undocumented: "low", im_border: "low", im_levels: "low", im_daca: "low", im_asylum: "low",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "low", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "low",
+      cj_police: "low", cj_sentencing: "low", cj_guns: "low", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "low", so_dei: "low",
+      fp_military: "low", fp_aid: "low", fp_intervention: "low", fp_alliances: "low", fp_china: "low",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Hallie Shoffner", url: "https://ballotpedia.org/Hallie_Shoffner" },
+      { label: "The American Prospect — a prairie populist in Arkansas", url: "https://prospect.org/2026/10/08/prairie-populist-crimson-red-arkansas-hallie-shoffner/" },
+      { label: "5News — Cotton vs. Shoffner election guide", url: "https://www.5newsonline.com/article/news/politics/elections/cotton-shoffner-wadlin-us-senate-seat-arkansas-election-guide-2026/527-2428d516-c65d-4f7d-bd7c-14f8117deb7d" },
+    ],
+    sourcingNote:
+      "Her rural economic-populism (stability for working families, pro-worker, anti-corporate) is documented; she is more moderate on social issues. Her federal record is nil, so most positions are inferred and lower confidence.",
+  },
+  {
+    id: "cotton-ar-sen",
+    name: "Tom Cotton",
+    party: "Republican Party",
+    office: "U.S. Senate — Arkansas",
+    state: "AR",
+    bio: "Republican incumbent and an Army veteran, one of the Senate's most hawkish conservatives: hardline on immigration (including cutting legal immigration), a leading defense and China hawk, strongly pro-life and pro-gun, tough-on-crime, and for tax cuts.",
+    accent: "#EC2322",
+    values: { v_govrole: -2, v_freedom: -2, v_environment: -2, v_faith: 1, v_change: -2 },
+    positions: {
+      hc_coverage: -2, hc_drugs: -1, hc_preexisting: -1, hc_medicaid: -2, hc_costs: -2,
+      ec_taxes: -2, ec_wage: -2, ec_spending: -2, ec_trade: 1, ec_labor: -2,
+      // Immigration — among the most restrictionist (incl. cutting legal immigration)
+      im_undocumented: -2, im_border: -2, im_levels: -2, im_daca: -2, im_asylum: -2,
+      ed_k12: -2, ed_debt: -2, ed_college: -2, ed_curriculum: -2, ed_prek: -2,
+      cl_urgency: -2, cl_fossil: -2, cl_renew: -2, cl_carbon: -2, cl_tradeoff: -2,
+      cj_police: -2, cj_sentencing: -2, cj_guns: -2, cj_drugs: -2, cj_death: -2,
+      so_abortion: -2, so_lgbtq: -2, so_religion: -2, so_voting: -2, so_dei: -2,
+      // Foreign — a leading defense and China hawk (signature)
+      fp_military: -2, fp_aid: -1, fp_intervention: -2, fp_alliances: -1, fp_china: -2,
+      ho_afford: -2, ho_zoning: -2, ho_renters: -2, ho_homeless: -2, ho_ownership: -2,
+    },
+    positionConfidence: {
+      hc_coverage: "medium", hc_drugs: "low", hc_preexisting: "low", hc_medicaid: "low", hc_costs: "low",
+      ec_taxes: "medium", ec_wage: "low", ec_spending: "medium", ec_trade: "low", ec_labor: "low",
+      im_undocumented: "high", im_border: "high", im_levels: "high", im_daca: "medium", im_asylum: "medium",
+      ed_k12: "low", ed_debt: "low", ed_college: "low", ed_curriculum: "low", ed_prek: "low",
+      cl_urgency: "medium", cl_fossil: "low", cl_renew: "low", cl_carbon: "low", cl_tradeoff: "medium",
+      cj_police: "medium", cj_sentencing: "medium", cj_guns: "medium", cj_drugs: "low", cj_death: "low",
+      so_abortion: "medium", so_lgbtq: "low", so_religion: "low", so_voting: "medium", so_dei: "low",
+      fp_military: "high", fp_aid: "low", fp_intervention: "high", fp_alliances: "low", fp_china: "high",
+      ho_afford: "low", ho_zoning: "low", ho_renters: "low", ho_homeless: "low", ho_ownership: "low",
+    },
+    sources: [
+      { label: "Ballotpedia — Tom Cotton", url: "https://ballotpedia.org/Tom_Cotton" },
+      { label: "OnTheIssues — Tom Cotton", url: "https://www.ontheissues.org/Tom_Cotton.htm" },
+      { label: "Arkansas Advocate — Cotton vs. Shoffner", url: "https://arkansasadvocate.com/2026/10/14/debate-in-arkansas-us-senate-race-wont-take-place-cotton-and-shoffner-campaigns-say/" },
+    ],
+    sourcingNote:
+      "Hardline immigration (including cutting legal immigration), a hawkish defense/China posture, pro-life, pro-2A, tough-on-crime and tax-cut positions are from his well-documented Senate record. A few down-ballot items are inferred and lower confidence.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
